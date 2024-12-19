@@ -1,0 +1,48 @@
+[ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMDelegate.mc"; @line = 1; ]
+using Rez;
+[ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMDelegate.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMDelegate.mc"; @line = 3; ]
+import Toybox.WatchUi;
+[ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMDelegate.mc"; @line = 5; ]
+class CIQVRMDelegate extends WatchUi.BehaviorDelegate{
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMDelegate.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMDelegate.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMDelegate.mc"; @line = 6; ]
+    function initialize() as Void {
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMDelegate_mc_6_24_8_2_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMDelegate.mc" 7 4 ]
+        %tmp.2 = getv ? :BehaviorDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMDelegate_mc_6_24_8_2_stop:
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMDelegate.mc"; @line = 10; ]
+    function onMenu() as Boolean {
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMDelegate_mc_10_31_17_2_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMDelegate.mc" 11 4 ]
+        %tmp.1 = getm $.Toybox.WatchUi;
+        %tmp.2 = getv function %tmp.1 :pushView;
+        %tmp.5 = getm $.Rez;
+        %tmp.6 = getv %tmp.5 :Menus;
+        %tmp.7 = getv function ? %tmp.6 :MainMenu;
+        %tmp.3 = newc %tmp.7 ();
+        %tmp.11 = getv ? :CIQVRMMenuDelegate;
+        %tmp.8 = newc %tmp.11 ();
+        %tmp.12 = 4;
+        %tmp.13 = as %tmp.12 Toybox.WatchUi.SlideType;
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.8, %tmp.13);
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMDelegate.mc" 16 4 ]
+        %tmp.14 = true;
+        ret %tmp.14;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMDelegate_mc_10_31_17_2_stop:
+    }
+}
+[ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMDelegate.mc"; @line = 1; ]
+<init> {
+}

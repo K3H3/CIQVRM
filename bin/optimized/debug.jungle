@@ -1,0 +1,4 @@
+project.manifest=..\..\manifest.xml
+fenix7pro.sourcePath = group000-debug\source\**.mc
+fenix7pro.resourcePath = ..\..\resources
+fenix7pro.personality = ..\..\resources;..\..\..\..\..\..\Users\Mabea\AppData\Roaming\Garmin\ConnectIQ\Devices\fenix7pro

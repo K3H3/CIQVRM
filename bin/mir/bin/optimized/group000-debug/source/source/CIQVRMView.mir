@@ -1,0 +1,58 @@
+[ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMView.mc"; @line = 1; ]
+using Rez;
+[ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMView.mc"; @line = 2; ]
+import Toybox.Graphics;
+[ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMView.mc"; @line = 3; ]
+import Toybox.WatchUi;
+[ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMView.mc"; @line = 5; ]
+class CIQVRMView extends WatchUi.View{
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMView.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMView.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMView.mc"; @line = 6; ]
+    function initialize() as Void {
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMView_mc_6_24_8_2_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMView.mc" 7 4 ]
+        %tmp.2 = getv ? :View;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMView_mc_6_24_8_2_stop:
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMView.mc"; @line = 11; ]
+    function onLayout(dc as Dc) as Void {
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMView_mc_11_38_13_2_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMView.mc" 12 4 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :setLayout;
+        %tmp.3 = getm $.Rez;
+        %tmp.4 = getv %tmp.3 :Layouts;
+        %tmp.5 = getv function %tmp.4 :MainLayout;
+        %tmp.7 = lgetv %dc;
+        %tmp.8 = invoke %tmp.4 %tmp.5(%tmp.7);
+        invoke %tmp.1 %tmp.2(%tmp.8);
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMView_mc_11_38_13_2_stop:
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMView.mc"; @line = 18; ]
+    function onShow() as Void {
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMView.mc"; @line = 21; ]
+    function onUpdate(dc as Dc) as Void {
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMView_mc_21_38_24_2_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMView.mc" 23 4 ]
+        %tmp.2 = getv ? :View;
+        %tmp.3 = getv function %tmp.2 :onUpdate;
+        %tmp.5 = lgetv %dc;
+        invoke %tmp.2 %tmp.3(%tmp.5);
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMView_mc_21_38_24_2_stop:
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMView.mc"; @line = 29; ]
+    function onHide() as Void {
+    }
+}
+[ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMView.mc"; @line = 1; ]
+<init> {
+}

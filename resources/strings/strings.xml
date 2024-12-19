@@ -1,0 +1,8 @@
+<strings>
+    <string id="AppName">CIQVRM</string>
+
+    <string id="prompt">Click the menu button</string>
+
+    <string id="get_data_label">Get Data</string>
+    <string id="get_token_label">Get Login-Token</string>
+</strings>

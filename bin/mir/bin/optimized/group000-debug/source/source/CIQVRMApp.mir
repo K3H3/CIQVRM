@@ -1,0 +1,578 @@
+[ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 1; ]
+import Toybox.Application;
+[ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 3; ]
+import Toybox.WatchUi;
+[ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 4; ]
+using Toybox.System;
+[ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 5; ]
+using Toybox.Communications;
+[ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 7; @position = 4; ]
+var token;
+[ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 9; ]
+class CIQVRMApp extends Application.AppBase{
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 9; ]
+    <init> {
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 9; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 10; ]
+    function initialize() as Void {
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_10_24_13_2_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 11 4 ]
+        %tmp.2 = getv ? :AppBase;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 12 4 ]
+        %tmp.4 = getm $.Toybox.System;
+        %tmp.5 = getv function %tmp.4 :println;
+        %tmp.6 = "app-initialize()";
+        invoke %tmp.4 %tmp.5(%tmp.6);
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_10_24_13_2_stop:
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 15; ]
+    function askForToken() {
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_15_25_38_2_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 18 4 ]
+        [ "C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_15_25_38_2_start" "C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_15_25_38_2_stop" ]
+        %params.1 = local;
+        %tmp.1 = newd 2;
+        %tmp.2 = "username";
+        %tmp.3 = "USERNAME";
+        %tmp.4 = dup %tmp.1;
+        %tmp.5 = aputv %tmp.4 %tmp.2 %tmp.3;
+        %tmp.6 = "password";
+        %tmp.7 = "PASSWORD";
+        %tmp.8 = dup %tmp.5;
+        %tmp.9 = aputv %tmp.8 %tmp.6 %tmp.7;
+        lputv %params.1 %tmp.9;
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 26 4 ]
+        %tmp.10 = getm $.Toybox.Communications;
+        %tmp.11 = getv function %tmp.10 :makeWebRequest;
+        %tmp.12 = "https://vrmapi.victronenergy.com/v2/auth/login";
+        %tmp.14 = lgetv %params.1;
+        %tmp.15 = newd 3;
+        %tmp.17 = const :method;
+        %tmp.18 = 3;
+        %tmp.19 = as %tmp.18 Toybox.Communications.HttpRequestMethod;
+        %tmp.20 = dup %tmp.15;
+        %tmp.21 = aputv %tmp.20 %tmp.17 %tmp.19;
+        %tmp.23 = const :headers;
+        %tmp.24 = newd 1;
+        %tmp.25 = "Content-Type";
+        %tmp.26 = 1;
+        %tmp.27 = as %tmp.26 Toybox.Communications.HttpRequestContentType;
+        %tmp.28 = dup %tmp.24;
+        %tmp.29 = aputv %tmp.28 %tmp.25 %tmp.27;
+        %tmp.30 = dup %tmp.21;
+        %tmp.31 = aputv %tmp.30 %tmp.23 %tmp.29;
+        %tmp.33 = const :responseType;
+        %tmp.34 = 0;
+        %tmp.35 = as %tmp.34 Toybox.Communications.HttpResponseContentType;
+        %tmp.36 = dup %tmp.31;
+        %tmp.37 = aputv %tmp.36 %tmp.33 %tmp.35;
+        %tmp.38 = self;
+        %tmp.39 = getv function %tmp.38 :method;
+        %tmp.41 = const :onTokenReceived;
+        %tmp.42 = invoke %tmp.38 %tmp.39(%tmp.41);
+        invoke %tmp.10 %tmp.11(%tmp.12, %tmp.14, %tmp.37, %tmp.42);
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_15_25_38_2_stop:
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 40; ]
+    function askForInstalledDevices() {
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_40_36_52_2_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 42 4 ]
+        %tmp.1 = getm $.Toybox.Communications;
+        %tmp.2 = getv function %tmp.1 :makeWebRequest;
+        %tmp.3 = "https://vrmapi.victronenergy.com/v2/installations/IDSITE/system-overview";
+        %tmp.4 = null;
+        %tmp.5 = newd 3;
+        %tmp.7 = const :method;
+        %tmp.8 = 1;
+        %tmp.9 = as %tmp.8 Toybox.Communications.HttpRequestMethod;
+        %tmp.10 = dup %tmp.5;
+        %tmp.11 = aputv %tmp.10 %tmp.7 %tmp.9;
+        %tmp.13 = const :headers;
+        %tmp.14 = newd 1;
+        %tmp.15 = "X-Authorization";
+        %tmp.16 = "Bearer ";
+        %tmp.18 = getv ? :token;
+        %tmp.19 = add %tmp.16 %tmp.18;
+        %tmp.20 = dup %tmp.14;
+        %tmp.21 = aputv %tmp.20 %tmp.15 %tmp.19;
+        %tmp.22 = dup %tmp.11;
+        %tmp.23 = aputv %tmp.22 %tmp.13 %tmp.21;
+        %tmp.25 = const :responseType;
+        %tmp.26 = 0;
+        %tmp.27 = as %tmp.26 Toybox.Communications.HttpResponseContentType;
+        %tmp.28 = dup %tmp.23;
+        %tmp.29 = aputv %tmp.28 %tmp.25 %tmp.27;
+        %tmp.30 = self;
+        %tmp.31 = getv function %tmp.30 :method;
+        %tmp.33 = const :onInstalledDevices;
+        %tmp.34 = invoke %tmp.30 %tmp.31(%tmp.33);
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4, %tmp.29, %tmp.34);
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_40_36_52_2_stop:
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 54; ]
+    function askBatteryInfo() {
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_54_28_67_2_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 57 4 ]
+        %tmp.1 = getm $.Toybox.Communications;
+        %tmp.2 = getv function %tmp.1 :makeWebRequest;
+        %tmp.3 = "https://vrmapi.victronenergy.com/v2/installations/IDSITE/widgets/BatterySummary?instance=512";
+        %tmp.4 = null;
+        %tmp.5 = newd 3;
+        %tmp.7 = const :method;
+        %tmp.8 = 1;
+        %tmp.9 = as %tmp.8 Toybox.Communications.HttpRequestMethod;
+        %tmp.10 = dup %tmp.5;
+        %tmp.11 = aputv %tmp.10 %tmp.7 %tmp.9;
+        %tmp.13 = const :headers;
+        %tmp.14 = newd 1;
+        %tmp.15 = "X-Authorization";
+        %tmp.16 = "Bearer ";
+        %tmp.18 = getv ? :token;
+        %tmp.19 = add %tmp.16 %tmp.18;
+        %tmp.20 = dup %tmp.14;
+        %tmp.21 = aputv %tmp.20 %tmp.15 %tmp.19;
+        %tmp.22 = dup %tmp.11;
+        %tmp.23 = aputv %tmp.22 %tmp.13 %tmp.21;
+        %tmp.25 = const :responseType;
+        %tmp.26 = 0;
+        %tmp.27 = as %tmp.26 Toybox.Communications.HttpResponseContentType;
+        %tmp.28 = dup %tmp.23;
+        %tmp.29 = aputv %tmp.28 %tmp.25 %tmp.27;
+        %tmp.30 = self;
+        %tmp.31 = getv function %tmp.30 :method;
+        %tmp.33 = const :onBatteryInfo;
+        %tmp.34 = invoke %tmp.30 %tmp.31(%tmp.33);
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4, %tmp.29, %tmp.34);
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_54_28_67_2_stop:
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 70; ]
+    function onStart(state as Dictionary or Null) as Void {
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_70_49_73_2_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 72 4 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :askForToken;
+        invoke %tmp.1 %tmp.2();
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_70_49_73_2_stop:
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 76; ]
+    function onStop(state as Dictionary or Null) as Void {
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 79; ]
+    function getInitialView() as [Views] or [Views, InputDelegates] {
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_79_66_82_2_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 81 4 ]
+        %tmp.1 = newa 2;
+        %tmp.5 = getv ? :CIQVRMView;
+        %tmp.2 = newc %tmp.5 ();
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 0 %tmp.2;
+        %tmp.11 = getv ? :CIQVRMDelegate;
+        %tmp.8 = newc %tmp.11 ();
+        %tmp.12 = dup %tmp.7;
+        %tmp.13 = aputv %tmp.12 1 %tmp.8;
+        ret %tmp.13;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_79_66_82_2_stop:
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 85; ]
+    function onTokenReceived(responseCode as Number, data as Null or Dictionary or String) as Void {
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_88_12_96_2_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 89 4 ]
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_89_4_95_4_if_stmt:
+        %tmp.2 = lgetv %responseCode;
+        %tmp.3 = 200;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_89_4_95_4_if_false;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_89_4_95_4_if_true:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_89_29_93_4_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 90 6 ]
+        %tmp.6 = lgetv %data;
+        %tmp.7 = as %tmp.6 Dictionary;
+        %tmp.8 = "token";
+        %tmp.9 = agetv %tmp.7 %tmp.8;
+        putv self :token %tmp.9;
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 92 6 ]
+        %tmp.10 = self;
+        %tmp.11 = getv function %tmp.10 :askForInstalledDevices;
+        invoke %tmp.10 %tmp.11();
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_89_29_93_4_stop:
+        goto @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_89_4_95_4_if_end;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_89_4_95_4_if_false:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_93_11_95_4_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 94 6 ]
+        %tmp.12 = getm $.Toybox.System;
+        %tmp.13 = getv function %tmp.12 :println;
+        %tmp.14 = "Response: ";
+        %tmp.16 = lgetv %responseCode;
+        %tmp.17 = add %tmp.14 %tmp.16;
+        invoke %tmp.12 %tmp.13(%tmp.17);
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_93_11_95_4_stop:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_89_4_95_4_if_end:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_88_12_96_2_stop:
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 98; ]
+    function onInstalledDevices(responseCode as Number, installedDevices as Null or Dictionary or String) {
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_101_4_109_2_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 102 4 ]
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_102_4_108_4_if_stmt:
+        %tmp.2 = lgetv %responseCode;
+        %tmp.3 = 200;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_102_4_108_4_if_false;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_102_4_108_4_if_true:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_102_29_106_4_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 103 6 ]
+        %tmp.5 = getm $.Toybox.System;
+        %tmp.6 = getv function %tmp.5 :println;
+        %tmp.7 = "Installed Devices Received";
+        invoke %tmp.5 %tmp.6(%tmp.7);
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 105 6 ]
+        %tmp.8 = self;
+        %tmp.9 = getv function %tmp.8 :filterMostCurrentBattery;
+        %tmp.11 = lgetv %installedDevices;
+        invoke %tmp.8 %tmp.9(%tmp.11);
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_102_29_106_4_stop:
+        goto @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_102_4_108_4_if_end;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_102_4_108_4_if_false:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_106_11_108_4_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 107 6 ]
+        %tmp.12 = getm $.Toybox.System;
+        %tmp.13 = getv function %tmp.12 :println;
+        %tmp.14 = "Response: ";
+        %tmp.16 = lgetv %responseCode;
+        %tmp.17 = add %tmp.14 %tmp.16;
+        invoke %tmp.12 %tmp.13(%tmp.17);
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_106_11_108_4_stop:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_102_4_108_4_if_end:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_101_4_109_2_stop:
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 111; ]
+    function filterMostCurrentBattery(installedDevices) {
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_111_54_153_2_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 113 4 ]
+        [ "C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_111_54_153_2_start" "C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_111_54_153_2_stop" ]
+        %batteryLastCon.1 = local;
+        %tmp.1 = null;
+        lputv %batteryLastCon.1 %tmp.1;
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 114 4 ]
+        [ "C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_111_54_153_2_start" "C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_111_54_153_2_stop" ]
+        %batteryInstance.2 = local;
+        %tmp.2 = null;
+        lputv %batteryInstance.2 %tmp.2;
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 116 4 ]
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_116_4_152_4_if_stmt:
+        %tmp.4 = lgetv %installedDevices;
+        %tmp.5 = "records";
+        %tmp.6 = agetv %tmp.4 %tmp.5;
+        %tmp.7 = null;
+        %tmp.8 = ne %tmp.6 %tmp.7;
+        bf %tmp.8 @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_116_4_152_4_if_end;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_116_4_152_4_if_true:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_116_45_152_4_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 117 6 ]
+        [ "C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_116_45_152_4_start" "C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_116_45_152_4_stop" ]
+        %devices.3 = local;
+        %tmp.10 = lgetv %installedDevices;
+        %tmp.11 = "records";
+        %tmp.12 = agetv %tmp.10 %tmp.11;
+        %tmp.13 = "devices";
+        %tmp.14 = agetv %tmp.12 %tmp.13;
+        lputv %devices.3 %tmp.14;
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 119 6 ]
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_119_6_151_6_if_stmt:
+        %tmp.16 = lgetv %devices.3;
+        %tmp.17 = null;
+        %tmp.18 = ne %tmp.16 %tmp.17;
+        bf %tmp.18 @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_119_6_151_6_if_end;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_119_6_151_6_if_true:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_119_27_151_6_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 120 8 ]
+        [ "C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_119_27_151_6_start" "C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_119_27_151_6_stop" ]
+        %devicesSize.4 = local;
+        %tmp.19 = lgetv %devices.3;
+        %tmp.20 = as %tmp.19 { (!Null) };
+        %tmp.21 = getv function %tmp.20 :size;
+        %tmp.22 = invoke %tmp.20 %tmp.21();
+        lputv %devicesSize.4 %tmp.22;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_123_8_144_8_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 124 10 ]
+        %tmp.23 = 0;
+        lputv %installedDevices %tmp.23;
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 125 10 ]
+        for @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_125_10_143_10_for_test @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_125_10_143_10_for_incr @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_125_10_143_10_for_end;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_125_10_143_10_for_init:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_125_10_143_10_for_test:
+        %tmp.25 = lgetv %installedDevices;
+        %tmp.27 = lgetv %devicesSize.4;
+        %tmp.28 = lt %tmp.25 %tmp.27;
+        bf %tmp.28 @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_125_10_143_10_for_end;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_125_10_143_10_for_begin:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_129_12_143_10_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 130 12 ]
+        [ "C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_129_12_143_10_start" "C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_129_12_143_10_stop" ]
+        %deviceDict.5 = local;
+        %tmp.30 = lgetv %devices.3;
+        %tmp.31 = as %tmp.30 { (!Null) };
+        %tmp.33 = lgetv %installedDevices;
+        %tmp.34 = agetv %tmp.31 %tmp.33;
+        lputv %deviceDict.5 %tmp.34;
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 131 12 ]
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_131_12_142_12_if_stmt:
+        %tmp.36 = lgetv %deviceDict.5;
+        %tmp.37 = "name";
+        %tmp.38 = agetv %tmp.36 %tmp.37;
+        %tmp.39 = getv function %tmp.38 :toString;
+        %tmp.40 = invoke %tmp.38 %tmp.39();
+        %tmp.41 = getv function %tmp.40 :equals;
+        %tmp.42 = "Battery Monitor";
+        %tmp.43 = invoke %tmp.40 %tmp.41(%tmp.42);
+        bf %tmp.43 @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_131_12_142_12_if_end;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_131_12_142_12_if_true:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_131_73_142_12_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 133 14 ]
+        [ "C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_131_73_142_12_start" "C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_131_73_142_12_stop" ]
+        %currentBattyCon.6 = local;
+        %tmp.45 = lgetv %deviceDict.5;
+        %tmp.46 = "lastConnection";
+        %tmp.47 = agetv %tmp.45 %tmp.46;
+        %tmp.48 = getv function %tmp.47 :toNumber;
+        %tmp.49 = invoke %tmp.47 %tmp.48();
+        lputv %currentBattyCon.6 %tmp.49;
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 135 14 ]
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_135_14_141_14_if_stmt:
+        %tmp.51 = lgetv %batteryLastCon.1;
+        %tmp.52 = null;
+        %tmp.53 = eq %tmp.51 %tmp.52;
+        bf %tmp.53 @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_135_14_141_14_if_false;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_135_14_141_14_if_true:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_135_42_138_14_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 136 16 ]
+        %tmp.55 = lgetv %currentBattyCon.6;
+        lputv %batteryLastCon.1 %tmp.55;
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 137 16 ]
+        %tmp.57 = lgetv %deviceDict.5;
+        %tmp.58 = "instance";
+        %tmp.59 = agetv %tmp.57 %tmp.58;
+        lputv %batteryInstance.2 %tmp.59;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_135_42_138_14_stop:
+        goto @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_135_14_141_14_if_end;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_135_14_141_14_if_false:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 138 21 ]
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_138_21_141_14_if_stmt:
+        %tmp.61 = lgetv %batteryLastCon.1;
+        %tmp.62 = as %tmp.61 { (!Null) };
+        %tmp.64 = lgetv %currentBattyCon.6;
+        %tmp.65 = lt %tmp.62 %tmp.64;
+        bf %tmp.65 @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_138_21_141_14_if_end;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_138_21_141_14_if_true:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_138_59_141_14_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 139 16 ]
+        %tmp.67 = lgetv %currentBattyCon.6;
+        lputv %batteryLastCon.1 %tmp.67;
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 140 16 ]
+        %tmp.69 = lgetv %deviceDict.5;
+        %tmp.70 = "instance";
+        %tmp.71 = agetv %tmp.69 %tmp.70;
+        lputv %batteryInstance.2 %tmp.71;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_138_59_141_14_stop:
+        goto @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_138_21_141_14_if_end;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_138_21_141_14_if_end:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_135_14_141_14_if_end:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_131_73_142_12_stop:
+        goto @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_131_12_142_12_if_end;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_131_12_142_12_if_end:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_129_12_143_10_stop:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_125_10_143_10_for_incr:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 128 ]
+        %tmp.72 = lgetv %installedDevices;
+        %tmp.73 = 1;
+        %tmp.74 = add %tmp.72 %tmp.73;
+        lputv %installedDevices %tmp.74;
+        goto @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_125_10_143_10_for_test;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_125_10_143_10_for_end:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_123_8_144_8_stop:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 145 8 ]
+        %tmp.75 = getm $.Toybox.System;
+        %tmp.76 = getv function %tmp.75 :println;
+        %tmp.77 = "Most current Battery Instance: ";
+        %tmp.79 = lgetv %batteryInstance.2;
+        %tmp.80 = add %tmp.77 %tmp.79;
+        %tmp.81 = ", Last Connection: ";
+        %tmp.82 = add %tmp.80 %tmp.81;
+        %tmp.84 = lgetv %batteryLastCon.1;
+        %tmp.85 = add %tmp.82 %tmp.84;
+        invoke %tmp.75 %tmp.76(%tmp.85);
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_119_27_151_6_stop:
+        goto @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_119_6_151_6_if_end;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_119_6_151_6_if_end:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_116_45_152_4_stop:
+        goto @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_116_4_152_4_if_end;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_116_4_152_4_if_end:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_111_54_153_2_stop:
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 155; ]
+    function parseResponse(response) {
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_155_35_185_2_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 157 4 ]
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_157_4_184_4_if_stmt:
+        %tmp.2 = lgetv %response;
+        %tmp.3 = "records";
+        %tmp.4 = agetv %tmp.2 %tmp.3;
+        %tmp.5 = null;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_157_4_184_4_if_false;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_157_4_184_4_if_true:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_157_37_182_4_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 158 6 ]
+        %tmp.8 = lgetv %response;
+        %tmp.9 = "records";
+        %tmp.10 = agetv %tmp.8 %tmp.9;
+        lputv %response %tmp.10;
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 161 6 ]
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_161_6_181_6_if_stmt:
+        %tmp.12 = lgetv %response;
+        %tmp.13 = "data";
+        %tmp.14 = agetv %tmp.12 %tmp.13;
+        %tmp.15 = null;
+        %tmp.16 = ne %tmp.14 %tmp.15;
+        bf %tmp.16 @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_161_6_181_6_if_false;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_161_6_181_6_if_true:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_161_50_179_6_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 163 8 ]
+        %tmp.18 = lgetv %response;
+        %tmp.19 = "data";
+        %tmp.20 = agetv %tmp.18 %tmp.19;
+        lputv %response %tmp.20;
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 166 8 ]
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_166_8_178_8_if_stmt:
+        %tmp.22 = lgetv %response;
+        %tmp.23 = "51";
+        %tmp.24 = agetv %tmp.22 %tmp.23;
+        %tmp.25 = null;
+        %tmp.26 = ne %tmp.24 %tmp.25;
+        bf %tmp.26 @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_166_8_178_8_if_false;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_166_8_178_8_if_true:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_166_47_176_8_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 167 10 ]
+        %tmp.28 = lgetv %response;
+        %tmp.29 = "51";
+        %tmp.30 = agetv %tmp.28 %tmp.29;
+        lputv %response %tmp.30;
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 169 10 ]
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_169_10_175_10_if_stmt:
+        %tmp.32 = lgetv %response;
+        %tmp.33 = "valueFormattedWithUnit";
+        %tmp.34 = agetv %tmp.32 %tmp.33;
+        %tmp.35 = null;
+        %tmp.36 = ne %tmp.34 %tmp.35;
+        bf %tmp.36 @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_169_10_175_10_if_false;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_169_10_175_10_if_true:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_169_72_173_10_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 170 12 ]
+        %tmp.37 = getm $.Toybox.System;
+        %tmp.38 = getv function %tmp.37 :println;
+        %tmp.39 = "Battery SoC: ";
+        %tmp.41 = lgetv %response;
+        %tmp.42 = "valueFormattedWithUnit";
+        %tmp.43 = agetv %tmp.41 %tmp.42;
+        %tmp.44 = add %tmp.39 %tmp.43;
+        invoke %tmp.37 %tmp.38(%tmp.44);
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_169_72_173_10_stop:
+        goto @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_169_10_175_10_if_end;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_169_10_175_10_if_false:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_173_17_175_10_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 174 12 ]
+        %tmp.45 = getm $.Toybox.System;
+        %tmp.46 = getv function %tmp.45 :println;
+        %tmp.47 = "ValueFormattedWithUnit not found";
+        invoke %tmp.45 %tmp.46(%tmp.47);
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_173_17_175_10_stop:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_169_10_175_10_if_end:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_166_47_176_8_stop:
+        goto @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_166_8_178_8_if_end;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_166_8_178_8_if_false:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_176_15_178_8_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 177 10 ]
+        %tmp.48 = getm $.Toybox.System;
+        %tmp.49 = getv function %tmp.48 :println;
+        %tmp.50 = "51 not found";
+        invoke %tmp.48 %tmp.49(%tmp.50);
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_176_15_178_8_stop:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_166_8_178_8_if_end:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_161_50_179_6_stop:
+        goto @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_161_6_181_6_if_end;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_161_6_181_6_if_false:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_179_13_181_6_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 180 8 ]
+        %tmp.51 = getm $.Toybox.System;
+        %tmp.52 = getv function %tmp.51 :println;
+        %tmp.53 = "Data not found";
+        invoke %tmp.51 %tmp.52(%tmp.53);
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_179_13_181_6_stop:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_161_6_181_6_if_end:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_157_37_182_4_stop:
+        goto @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_157_4_184_4_if_end;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_157_4_184_4_if_false:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_182_11_184_4_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 183 6 ]
+        %tmp.54 = getm $.Toybox.System;
+        %tmp.55 = getv function %tmp.54 :println;
+        %tmp.56 = "Records not found";
+        invoke %tmp.54 %tmp.55(%tmp.56);
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_182_11_184_4_stop:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_157_4_184_4_if_end:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_155_35_185_2_stop:
+    }
+    [ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 187; ]
+    function onBatteryInfo(responseCode as Number, data as Null or Dictionary or String) as Void {
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_190_12_196_2_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 191 4 ]
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_191_4_195_4_if_stmt:
+        %tmp.2 = lgetv %responseCode;
+        %tmp.3 = 200;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_191_4_195_4_if_false;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_191_4_195_4_if_true:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_191_29_193_4_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 192 6 ]
+        %tmp.5 = self;
+        %tmp.6 = getv function %tmp.5 :parseResponse;
+        %tmp.8 = lgetv %data;
+        invoke %tmp.5 %tmp.6(%tmp.8);
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_191_29_193_4_stop:
+        goto @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_191_4_195_4_if_end;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_191_4_195_4_if_false:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_193_11_195_4_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 194 6 ]
+        %tmp.9 = getm $.Toybox.System;
+        %tmp.10 = getv function %tmp.9 :println;
+        %tmp.11 = "Response: ";
+        %tmp.13 = lgetv %responseCode;
+        %tmp.14 = add %tmp.11 %tmp.13;
+        invoke %tmp.9 %tmp.10(%tmp.14);
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_193_11_195_4_stop:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_191_4_195_4_if_end:
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_190_12_196_2_stop:
+    }
+}
+[ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 199; ]
+function getApp() as CIQVRMApp {
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_199_31_201_0_start:
+[ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc" 200 2 ]
+    %tmp.1 = getm $.Toybox.Application;
+    %tmp.2 = getv function %tmp.1 :getApp;
+    %tmp.3 = invoke %tmp.1 %tmp.2();
+    %tmp.4 = as %tmp.3 CIQVRMApp;
+    ret %tmp.4;
+C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMApp_mc_199_31_201_0_stop:
+}
+[ @file = "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMApp.mc"; @line = 1; ]
+<init> {
+}
