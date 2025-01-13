@@ -35,7 +35,7 @@ module Rez {
 c_dev_Garmin_GCIQVRM_CIQVRM_bin_gen_006_B4375_00_source_Rez_mcgen_15_74_22_8_start:
 [ "c:\dev\Garmin\GCIQVRM\CIQVRM\bin\gen\006-B4375-00\source\Rez.mcgen" 16 12 ]
             [ "c_dev_Garmin_GCIQVRM_CIQVRM_bin_gen_006_B4375_00_source_Rez_mcgen_15_74_22_8_start" "c_dev_Garmin_GCIQVRM_CIQVRM_bin_gen_006_B4375_00_source_Rez_mcgen_15_74_22_8_stop" ]
-            %rez_cmp_local_text_1177156138.1 = local;
+            %rez_cmp_local_text_3823395461.1 = local;
             %tmp.3 = getm $.Toybox.WatchUi;
             %tmp.4 = getv function ? %tmp.3 :Text;
             %tmp.5 = newd 6;
@@ -72,7 +72,7 @@ c_dev_Garmin_GCIQVRM_CIQVRM_bin_gen_006_B4375_00_source_Rez_mcgen_15_74_22_8_sta
             %tmp.42 = dup %tmp.37;
             %tmp.43 = aputv %tmp.42 %tmp.39 %tmp.41;
             %tmp.1 = newc %tmp.4 (%tmp.43);
-            lputv %rez_cmp_local_text_1177156138.1 %tmp.1;
+            lputv %rez_cmp_local_text_3823395461.1 %tmp.1;
 [ "c:\dev\Garmin\GCIQVRM\CIQVRM\bin\gen\006-B4375-00\source\Rez.mcgen" 18 12 ]
             [ "c_dev_Garmin_GCIQVRM_CIQVRM_bin_gen_006_B4375_00_source_Rez_mcgen_15_74_22_8_start" "c_dev_Garmin_GCIQVRM_CIQVRM_bin_gen_006_B4375_00_source_Rez_mcgen_15_74_22_8_stop" ]
             %rez_cmp_local_bitmap_victron.2 = local;
@@ -115,7 +115,7 @@ c_dev_Garmin_GCIQVRM_CIQVRM_bin_gen_006_B4375_00_source_Rez_mcgen_15_74_22_8_sta
             invoke %tmp.73 %tmp.74(%tmp.80, %tmp.82);
 [ "c:\dev\Garmin\GCIQVRM\CIQVRM\bin\gen\006-B4375-00\source\Rez.mcgen" 21 12 ]
             %tmp.83 = newa 2 Array<WatchUi.Drawable>;
-            %tmp.85 = lgetv %rez_cmp_local_text_1177156138.1;
+            %tmp.85 = lgetv %rez_cmp_local_text_3823395461.1;
             %tmp.86 = dup %tmp.83;
             %tmp.87 = aputv %tmp.86 0 %tmp.85;
             %tmp.89 = lgetv %rez_cmp_local_bitmap_victron.2;

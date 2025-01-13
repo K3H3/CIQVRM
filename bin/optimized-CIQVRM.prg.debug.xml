@@ -2,201 +2,310 @@
 <debugInfo>
     <manifest filename="C:\dev\Garmin\GCIQVRM\CIQVRM\manifest.xml"/>
     <pcToLineNum>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="1" lineNum="199" parent="globals" pc="268435460" symbol="getApp"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="1" lineNum="200" parent="globals" pc="268435470" symbol="getApp"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="2" lineNum="9" parent="globals/CIQVRMApp" pc="268435481" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMDelegate.mc" id="3" lineNum="5" parent="globals/CIQVRMDelegate" pc="268435493" symbol="&lt;init&gt;"/>
-        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="4" lineNum="7" parent="globals/Rez" pc="268435505" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="5" lineNum="5" parent="globals/CIQVRMMenuDelegate" pc="268435525" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="5" lineNum="6" parent="globals/CIQVRMMenuDelegate" pc="268435536" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMView.mc" id="6" lineNum="5" parent="globals/CIQVRMView" pc="268435566" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="7" lineNum="54" parent="globals/CIQVRMApp" pc="268435578" symbol="askBatteryInfo"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="7" lineNum="57" parent="globals/CIQVRMApp" pc="268435580" symbol="askBatteryInfo"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="8" lineNum="40" parent="globals/CIQVRMApp" pc="268435661" symbol="askForInstalledDevices"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="8" lineNum="42" parent="globals/CIQVRMApp" pc="268435663" symbol="askForInstalledDevices"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="9" lineNum="70" parent="globals/CIQVRMApp" pc="268435744" symbol="onStart"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="9" lineNum="72" parent="globals/CIQVRMApp" pc="268435746" symbol="onStart"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="10" lineNum="111" parent="globals/CIQVRMApp" pc="268435754" symbol="filterMostCurrentBattery"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="10" lineNum="113" parent="globals/CIQVRMApp" pc="268435757" symbol="filterMostCurrentBattery"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="10" lineNum="114" parent="globals/CIQVRMApp" pc="268435760" symbol="filterMostCurrentBattery"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="10" lineNum="116" parent="globals/CIQVRMApp" pc="268435763" symbol="filterMostCurrentBattery"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="10" lineNum="117" parent="globals/CIQVRMApp" pc="268435775" symbol="filterMostCurrentBattery"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="10" lineNum="119" parent="globals/CIQVRMApp" pc="268435791" symbol="filterMostCurrentBattery"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="10" lineNum="120" parent="globals/CIQVRMApp" pc="268435797" symbol="filterMostCurrentBattery"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="10" lineNum="124" parent="globals/CIQVRMApp" pc="268435807" symbol="filterMostCurrentBattery"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="10" lineNum="125" parent="globals/CIQVRMApp" pc="268435810" symbol="filterMostCurrentBattery"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="10" lineNum="130" parent="globals/CIQVRMApp" pc="268435818" symbol="filterMostCurrentBattery"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="10" lineNum="131" parent="globals/CIQVRMApp" pc="268435825" symbol="filterMostCurrentBattery"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="10" lineNum="133" parent="globals/CIQVRMApp" pc="268435855" symbol="filterMostCurrentBattery"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="10" lineNum="135" parent="globals/CIQVRMApp" pc="268435871" symbol="filterMostCurrentBattery"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="10" lineNum="136" parent="globals/CIQVRMApp" pc="268435877" symbol="filterMostCurrentBattery"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="10" lineNum="137" parent="globals/CIQVRMApp" pc="268435881" symbol="filterMostCurrentBattery"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="10" lineNum="138" parent="globals/CIQVRMApp" pc="268435894" symbol="filterMostCurrentBattery"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="10" lineNum="139" parent="globals/CIQVRMApp" pc="268435902" symbol="filterMostCurrentBattery"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="10" lineNum="140" parent="globals/CIQVRMApp" pc="268435906" symbol="filterMostCurrentBattery"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="10" lineNum="145" parent="globals/CIQVRMApp" pc="268435932" symbol="filterMostCurrentBattery"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="11" lineNum="79" parent="globals/CIQVRMApp" pc="268435969" symbol="getInitialView"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="11" lineNum="81" parent="globals/CIQVRMApp" pc="268435971" symbol="getInitialView"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="12" lineNum="85" parent="globals/CIQVRMApp" pc="268436026" symbol="onTokenReceived"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="12" lineNum="89" parent="globals/CIQVRMApp" pc="268436028" symbol="onTokenReceived"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="12" lineNum="90" parent="globals/CIQVRMApp" pc="268436037" symbol="onTokenReceived"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="12" lineNum="92" parent="globals/CIQVRMApp" pc="268436052" symbol="onTokenReceived"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="12" lineNum="94" parent="globals/CIQVRMApp" pc="268436062" symbol="onTokenReceived"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="13" lineNum="10" parent="globals/CIQVRMApp" pc="268436084" symbol="initialize"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="13" lineNum="11" parent="globals/CIQVRMApp" pc="268436086" symbol="initialize"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="13" lineNum="12" parent="globals/CIQVRMApp" pc="268436098" symbol="initialize"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="14" lineNum="15" parent="globals/CIQVRMApp" pc="268436117" symbol="askForToken"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="14" lineNum="18" parent="globals/CIQVRMApp" pc="268436120" symbol="askForToken"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="14" lineNum="26" parent="globals/CIQVRMApp" pc="268436127" symbol="askForToken"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="15" lineNum="155" parent="globals/CIQVRMApp" pc="268436192" symbol="parseResponse"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="15" lineNum="157" parent="globals/CIQVRMApp" pc="268436194" symbol="parseResponse"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="15" lineNum="158" parent="globals/CIQVRMApp" pc="268436206" symbol="parseResponse"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="15" lineNum="161" parent="globals/CIQVRMApp" pc="268436216" symbol="parseResponse"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="15" lineNum="163" parent="globals/CIQVRMApp" pc="268436228" symbol="parseResponse"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="15" lineNum="166" parent="globals/CIQVRMApp" pc="268436238" symbol="parseResponse"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="15" lineNum="167" parent="globals/CIQVRMApp" pc="268436250" symbol="parseResponse"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="15" lineNum="169" parent="globals/CIQVRMApp" pc="268436260" symbol="parseResponse"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="15" lineNum="170" parent="globals/CIQVRMApp" pc="268436272" symbol="parseResponse"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="15" lineNum="174" parent="globals/CIQVRMApp" pc="268436302" symbol="parseResponse"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="15" lineNum="177" parent="globals/CIQVRMApp" pc="268436323" symbol="parseResponse"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="15" lineNum="180" parent="globals/CIQVRMApp" pc="268436344" symbol="parseResponse"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="15" lineNum="183" parent="globals/CIQVRMApp" pc="268436365" symbol="parseResponse"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="16" lineNum="76" parent="globals/CIQVRMApp" pc="268436384" symbol="onStop"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="17" lineNum="98" parent="globals/CIQVRMApp" pc="268436387" symbol="onInstalledDevices"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="17" lineNum="102" parent="globals/CIQVRMApp" pc="268436389" symbol="onInstalledDevices"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="17" lineNum="103" parent="globals/CIQVRMApp" pc="268436398" symbol="onInstalledDevices"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="17" lineNum="105" parent="globals/CIQVRMApp" pc="268436416" symbol="onInstalledDevices"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="17" lineNum="107" parent="globals/CIQVRMApp" pc="268436430" symbol="onInstalledDevices"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="18" lineNum="187" parent="globals/CIQVRMApp" pc="268436452" symbol="onBatteryInfo"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="18" lineNum="191" parent="globals/CIQVRMApp" pc="268436454" symbol="onBatteryInfo"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="18" lineNum="192" parent="globals/CIQVRMApp" pc="268436463" symbol="onBatteryInfo"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="18" lineNum="194" parent="globals/CIQVRMApp" pc="268436477" symbol="onBatteryInfo"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMDelegate.mc" id="19" lineNum="10" parent="globals/CIQVRMDelegate" pc="268436499" symbol="onMenu"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMDelegate.mc" id="19" lineNum="11" parent="globals/CIQVRMDelegate" pc="268436501" symbol="onMenu"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMDelegate.mc" id="19" lineNum="16" parent="globals/CIQVRMDelegate" pc="268436570" symbol="onMenu"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMDelegate.mc" id="20" lineNum="6" parent="globals/CIQVRMDelegate" pc="268436572" symbol="initialize"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMDelegate.mc" id="20" lineNum="7" parent="globals/CIQVRMDelegate" pc="268436574" symbol="initialize"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="21" lineNum="12" parent="globals/CIQVRMMenuDelegate" pc="268436587" symbol="onMenuItem"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="21" lineNum="14" parent="globals/CIQVRMMenuDelegate" pc="268436590" symbol="onMenuItem"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="21" lineNum="15" parent="globals/CIQVRMMenuDelegate" pc="268436597" symbol="onMenuItem"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="21" lineNum="16" parent="globals/CIQVRMMenuDelegate" pc="268436608" symbol="onMenuItem"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="21" lineNum="17" parent="globals/CIQVRMMenuDelegate" pc="268436626" symbol="onMenuItem"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="21" lineNum="18" parent="globals/CIQVRMMenuDelegate" pc="268436637" symbol="onMenuItem"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="21" lineNum="19" parent="globals/CIQVRMMenuDelegate" pc="268436648" symbol="onMenuItem"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="21" lineNum="20" parent="globals/CIQVRMMenuDelegate" pc="268436666" symbol="onMenuItem"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="21" lineNum="21" parent="globals/CIQVRMMenuDelegate" pc="268436674" symbol="onMenuItem"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="22" lineNum="8" parent="globals/CIQVRMMenuDelegate" pc="268436696" symbol="initialize"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="22" lineNum="9" parent="globals/CIQVRMMenuDelegate" pc="268436698" symbol="initialize"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMView.mc" id="24" lineNum="11" parent="globals/CIQVRMView" pc="268436711" symbol="onLayout"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMView.mc" id="24" lineNum="12" parent="globals/CIQVRMView" pc="268436713" symbol="onLayout"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMView.mc" id="25" lineNum="6" parent="globals/CIQVRMView" pc="268436747" symbol="initialize"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMView.mc" id="25" lineNum="7" parent="globals/CIQVRMView" pc="268436749" symbol="initialize"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMView.mc" id="27" lineNum="21" parent="globals/CIQVRMView" pc="268436762" symbol="onUpdate"/>
-        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMView.mc" id="27" lineNum="23" parent="globals/CIQVRMView" pc="268436764" symbol="onUpdate"/>
-        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="28" lineNum="15" parent="globals/Rez/Layouts" pc="268436781" symbol="MainLayout"/>
-        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="28" lineNum="16" parent="globals/Rez/Layouts" pc="268436792" symbol="MainLayout"/>
-        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="28" lineNum="18" parent="globals/Rez/Layouts" pc="268436892" symbol="MainLayout"/>
-        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="28" lineNum="19" parent="globals/Rez/Layouts" pc="268436976" symbol="MainLayout"/>
-        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="28" lineNum="21" parent="globals/Rez/Layouts" pc="268437008" symbol="MainLayout"/>
-        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="29" lineNum="26" parent="globals/Rez/Menus/MainMenu" pc="268437023" symbol="&lt;init&gt;"/>
-        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="30" lineNum="27" parent="globals/Rez/Menus/MainMenu" pc="268437035" symbol="initialize"/>
-        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="30" lineNum="28" parent="globals/Rez/Menus/MainMenu" pc="268437037" symbol="initialize"/>
-        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="30" lineNum="29" parent="globals/Rez/Menus/MainMenu" pc="268437049" symbol="initialize"/>
-        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="30" lineNum="30" parent="globals/Rez/Menus/MainMenu" pc="268437094" symbol="initialize"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="1" lineNum="367" parent="globals" pc="268435460" symbol="getApp"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="1" lineNum="368" parent="globals" pc="268435470" symbol="getApp"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="2" lineNum="8" parent="globals/CIQVRMApp" pc="268435481" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="2" lineNum="24" parent="globals/CIQVRMApp" pc="268435492" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMDelegate.mc" id="3" lineNum="5" parent="globals/CIQVRMDelegate" pc="268435502" symbol="&lt;init&gt;"/>
+        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="4" lineNum="7" parent="globals/Rez" pc="268435514" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="5" lineNum="5" parent="globals/CIQVRMMenuDelegate" pc="268435534" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="5" lineNum="6" parent="globals/CIQVRMMenuDelegate" pc="268435545" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMView.mc" id="6" lineNum="5" parent="globals/CIQVRMView" pc="268435575" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="7" lineNum="207" parent="globals/CIQVRMApp" pc="268435587" symbol="buildBatteryUrl"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="7" lineNum="209" parent="globals/CIQVRMApp" pc="268435590" symbol="buildBatteryUrl"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="7" lineNum="210" parent="globals/CIQVRMApp" pc="268435597" symbol="buildBatteryUrl"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="7" lineNum="211" parent="globals/CIQVRMApp" pc="268435603" symbol="buildBatteryUrl"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="7" lineNum="213" parent="globals/CIQVRMApp" pc="268435623" symbol="buildBatteryUrl"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="8" lineNum="245" parent="globals/CIQVRMApp" pc="268435642" symbol="onSolarChargerInfo"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="8" lineNum="249" parent="globals/CIQVRMApp" pc="268435644" symbol="onSolarChargerInfo"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="8" lineNum="251" parent="globals/CIQVRMApp" pc="268435653" symbol="onSolarChargerInfo"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="8" lineNum="252" parent="globals/CIQVRMApp" pc="268435678" symbol="onSolarChargerInfo"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="8" lineNum="253" parent="globals/CIQVRMApp" pc="268435686" symbol="onSolarChargerInfo"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="8" lineNum="255" parent="globals/CIQVRMApp" pc="268435707" symbol="onSolarChargerInfo"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="9" lineNum="80" parent="globals/CIQVRMApp" pc="268435729" symbol="askForBatteryInfo"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="9" lineNum="82" parent="globals/CIQVRMApp" pc="268435731" symbol="askForBatteryInfo"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="10" lineNum="118" parent="globals/CIQVRMApp" pc="268435809" symbol="getInitialView"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="10" lineNum="120" parent="globals/CIQVRMApp" pc="268435811" symbol="getInitialView"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="11" lineNum="124" parent="globals/CIQVRMApp" pc="268435866" symbol="onTokenReceived"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="11" lineNum="128" parent="globals/CIQVRMApp" pc="268435868" symbol="onTokenReceived"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="11" lineNum="129" parent="globals/CIQVRMApp" pc="268435877" symbol="onTokenReceived"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="11" lineNum="132" parent="globals/CIQVRMApp" pc="268435881" symbol="onTokenReceived"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="11" lineNum="133" parent="globals/CIQVRMApp" pc="268435890" symbol="onTokenReceived"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="11" lineNum="134" parent="globals/CIQVRMApp" pc="268435923" symbol="onTokenReceived"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="11" lineNum="136" parent="globals/CIQVRMApp" pc="268435941" symbol="onTokenReceived"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="11" lineNum="137" parent="globals/CIQVRMApp" pc="268435959" symbol="onTokenReceived"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="11" lineNum="139" parent="globals/CIQVRMApp" pc="268435960" symbol="onTokenReceived"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="11" lineNum="140" parent="globals/CIQVRMApp" pc="268435970" symbol="onTokenReceived"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="11" lineNum="141" parent="globals/CIQVRMApp" pc="268435979" symbol="onTokenReceived"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="11" lineNum="142" parent="globals/CIQVRMApp" pc="268435989" symbol="onTokenReceived"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="11" lineNum="143" parent="globals/CIQVRMApp" pc="268435998" symbol="onTokenReceived"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="11" lineNum="144" parent="globals/CIQVRMApp" pc="268436005" symbol="onTokenReceived"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="11" lineNum="146" parent="globals/CIQVRMApp" pc="268436026" symbol="onTokenReceived"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="12" lineNum="217" parent="globals/CIQVRMApp" pc="268436048" symbol="buildSolarChargerUrl"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="12" lineNum="219" parent="globals/CIQVRMApp" pc="268436051" symbol="buildSolarChargerUrl"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="12" lineNum="220" parent="globals/CIQVRMApp" pc="268436073" symbol="buildSolarChargerUrl"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="12" lineNum="221" parent="globals/CIQVRMApp" pc="268436091" symbol="buildSolarChargerUrl"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="12" lineNum="223" parent="globals/CIQVRMApp" pc="268436095" symbol="buildSolarChargerUrl"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="12" lineNum="224" parent="globals/CIQVRMApp" pc="268436108" symbol="buildSolarChargerUrl"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="12" lineNum="225" parent="globals/CIQVRMApp" pc="268436124" symbol="buildSolarChargerUrl"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="12" lineNum="226" parent="globals/CIQVRMApp" pc="268436142" symbol="buildSolarChargerUrl"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="12" lineNum="228" parent="globals/CIQVRMApp" pc="268436161" symbol="buildSolarChargerUrl"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="12" lineNum="229" parent="globals/CIQVRMApp" pc="268436172" symbol="buildSolarChargerUrl"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="13" lineNum="41" parent="globals/CIQVRMApp" pc="268436198" symbol="askForToken"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="13" lineNum="44" parent="globals/CIQVRMApp" pc="268436201" symbol="askForToken"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="13" lineNum="52" parent="globals/CIQVRMApp" pc="268436208" symbol="askForToken"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="14" lineNum="150" parent="globals/CIQVRMApp" pc="268436273" symbol="onInstalledDevices"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="14" lineNum="154" parent="globals/CIQVRMApp" pc="268436275" symbol="onInstalledDevices"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="14" lineNum="156" parent="globals/CIQVRMApp" pc="268436284" symbol="onInstalledDevices"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="14" lineNum="157" parent="globals/CIQVRMApp" pc="268436295" symbol="onInstalledDevices"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="14" lineNum="160" parent="globals/CIQVRMApp" pc="268436302" symbol="onInstalledDevices"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="14" lineNum="161" parent="globals/CIQVRMApp" pc="268436313" symbol="onInstalledDevices"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="14" lineNum="163" parent="globals/CIQVRMApp" pc="268436330" symbol="onInstalledDevices"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="15" lineNum="109" parent="globals/CIQVRMApp" pc="268436352" symbol="onStart"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="15" lineNum="111" parent="globals/CIQVRMApp" pc="268436354" symbol="onStart"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="16" lineNum="115" parent="globals/CIQVRMApp" pc="268436362" symbol="onStop"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="17" lineNum="234" parent="globals/CIQVRMApp" pc="268436365" symbol="onBatteryInfo"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="17" lineNum="238" parent="globals/CIQVRMApp" pc="268436367" symbol="onBatteryInfo"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="17" lineNum="239" parent="globals/CIQVRMApp" pc="268436376" symbol="onBatteryInfo"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="17" lineNum="241" parent="globals/CIQVRMApp" pc="268436401" symbol="onBatteryInfo"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="18" lineNum="66" parent="globals/CIQVRMApp" pc="268436423" symbol="askForInstalledDevices"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="18" lineNum="68" parent="globals/CIQVRMApp" pc="268436425" symbol="askForInstalledDevices"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="167" parent="globals/CIQVRMApp" pc="268436506" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="169" parent="globals/CIQVRMApp" pc="268436509" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="170" parent="globals/CIQVRMApp" pc="268436512" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="172" parent="globals/CIQVRMApp" pc="268436515" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="173" parent="globals/CIQVRMApp" pc="268436527" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="175" parent="globals/CIQVRMApp" pc="268436543" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="176" parent="globals/CIQVRMApp" pc="268436549" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="179" parent="globals/CIQVRMApp" pc="268436559" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="180" parent="globals/CIQVRMApp" pc="268436570" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="181" parent="globals/CIQVRMApp" pc="268436577" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="182" parent="globals/CIQVRMApp" pc="268436607" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="185" parent="globals/CIQVRMApp" pc="268436623" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="186" parent="globals/CIQVRMApp" pc="268436629" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="187" parent="globals/CIQVRMApp" pc="268436633" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="188" parent="globals/CIQVRMApp" pc="268436646" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="191" parent="globals/CIQVRMApp" pc="268436654" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="192" parent="globals/CIQVRMApp" pc="268436658" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="194" parent="globals/CIQVRMApp" pc="268436671" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="198" parent="globals/CIQVRMApp" pc="268436696" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="199" parent="globals/CIQVRMApp" pc="268436714" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="202" parent="globals/CIQVRMApp" pc="268436718" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="19" lineNum="203" parent="globals/CIQVRMApp" pc="268436736" symbol="filterMostCurrentBattery"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="20" lineNum="259" parent="globals/CIQVRMApp" pc="268436738" symbol="filterSolarChargers"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="20" lineNum="261" parent="globals/CIQVRMApp" pc="268436741" symbol="filterSolarChargers"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="20" lineNum="262" parent="globals/CIQVRMApp" pc="268436781" symbol="filterSolarChargers"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="20" lineNum="263" parent="globals/CIQVRMApp" pc="268436793" symbol="filterSolarChargers"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="20" lineNum="265" parent="globals/CIQVRMApp" pc="268436809" symbol="filterSolarChargers"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="20" lineNum="266" parent="globals/CIQVRMApp" pc="268436815" symbol="filterSolarChargers"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="20" lineNum="270" parent="globals/CIQVRMApp" pc="268436825" symbol="filterSolarChargers"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="20" lineNum="271" parent="globals/CIQVRMApp" pc="268436828" symbol="filterSolarChargers"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="20" lineNum="276" parent="globals/CIQVRMApp" pc="268436836" symbol="filterSolarChargers"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="20" lineNum="277" parent="globals/CIQVRMApp" pc="268436843" symbol="filterSolarChargers"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="20" lineNum="279" parent="globals/CIQVRMApp" pc="268436853" symbol="filterSolarChargers"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="20" lineNum="281" parent="globals/CIQVRMApp" pc="268436876" symbol="filterSolarChargers"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="20" lineNum="282" parent="globals/CIQVRMApp" pc="268436891" symbol="filterSolarChargers"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="20" lineNum="294" parent="globals/CIQVRMApp" pc="268436910" symbol="filterSolarChargers"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="20" lineNum="301" parent="globals/CIQVRMApp" pc="268436968" symbol="filterSolarChargers"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="20" lineNum="307" parent="globals/CIQVRMApp" pc="268437014" symbol="filterSolarChargers"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="20" lineNum="308" parent="globals/CIQVRMApp" pc="268437032" symbol="filterSolarChargers"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="20" lineNum="311" parent="globals/CIQVRMApp" pc="268437036" symbol="filterSolarChargers"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="20" lineNum="312" parent="globals/CIQVRMApp" pc="268437054" symbol="filterSolarChargers"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="21" lineNum="94" parent="globals/CIQVRMApp" pc="268437056" symbol="askForSolarChargerInfo"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="21" lineNum="96" parent="globals/CIQVRMApp" pc="268437058" symbol="askForSolarChargerInfo"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="22" lineNum="26" parent="globals/CIQVRMApp" pc="268437136" symbol="initialize"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="22" lineNum="28" parent="globals/CIQVRMApp" pc="268437139" symbol="initialize"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="22" lineNum="29" parent="globals/CIQVRMApp" pc="268437146" symbol="initialize"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="22" lineNum="30" parent="globals/CIQVRMApp" pc="268437158" symbol="initialize"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="22" lineNum="34" parent="globals/CIQVRMApp" pc="268437179" symbol="initialize"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="316" parent="globals/CIQVRMApp" pc="268437201" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="317" parent="globals/CIQVRMApp" pc="268437204" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="318" parent="globals/CIQVRMApp" pc="268437207" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="320" parent="globals/CIQVRMApp" pc="268437210" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="321" parent="globals/CIQVRMApp" pc="268437228" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="323" parent="globals/CIQVRMApp" pc="268437238" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="328" parent="globals/CIQVRMApp" pc="268437256" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="329" parent="globals/CIQVRMApp" pc="268437266" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="330" parent="globals/CIQVRMApp" pc="268437275" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="334" parent="globals/CIQVRMApp" pc="268437284" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="335" parent="globals/CIQVRMApp" pc="268437287" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="336" parent="globals/CIQVRMApp" pc="268437295" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="339" parent="globals/CIQVRMApp" pc="268437302" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="340" parent="globals/CIQVRMApp" pc="268437320" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="342" parent="globals/CIQVRMApp" pc="268437333" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="343" parent="globals/CIQVRMApp" pc="268437360" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="345" parent="globals/CIQVRMApp" pc="268437370" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="346" parent="globals/CIQVRMApp" pc="268437375" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="348" parent="globals/CIQVRMApp" pc="268437390" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="355" parent="globals/CIQVRMApp" pc="268437439" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="356" parent="globals/CIQVRMApp" pc="268437444" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="357" parent="globals/CIQVRMApp" pc="268437465" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="359" parent="globals/CIQVRMApp" pc="268437471" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMApp.mc" id="23" lineNum="362" parent="globals/CIQVRMApp" pc="268437477" symbol="parseResponseForCode"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMDelegate.mc" id="24" lineNum="10" parent="globals/CIQVRMDelegate" pc="268437496" symbol="onMenu"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMDelegate.mc" id="24" lineNum="11" parent="globals/CIQVRMDelegate" pc="268437498" symbol="onMenu"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMDelegate.mc" id="24" lineNum="16" parent="globals/CIQVRMDelegate" pc="268437567" symbol="onMenu"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMDelegate.mc" id="25" lineNum="6" parent="globals/CIQVRMDelegate" pc="268437569" symbol="initialize"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMDelegate.mc" id="25" lineNum="7" parent="globals/CIQVRMDelegate" pc="268437571" symbol="initialize"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="26" lineNum="12" parent="globals/CIQVRMMenuDelegate" pc="268437584" symbol="onMenuItem"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="26" lineNum="14" parent="globals/CIQVRMMenuDelegate" pc="268437587" symbol="onMenuItem"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="26" lineNum="15" parent="globals/CIQVRMMenuDelegate" pc="268437594" symbol="onMenuItem"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="26" lineNum="16" parent="globals/CIQVRMMenuDelegate" pc="268437605" symbol="onMenuItem"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="26" lineNum="17" parent="globals/CIQVRMMenuDelegate" pc="268437623" symbol="onMenuItem"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="26" lineNum="18" parent="globals/CIQVRMMenuDelegate" pc="268437634" symbol="onMenuItem"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="26" lineNum="19" parent="globals/CIQVRMMenuDelegate" pc="268437645" symbol="onMenuItem"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="26" lineNum="20" parent="globals/CIQVRMMenuDelegate" pc="268437663" symbol="onMenuItem"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="26" lineNum="21" parent="globals/CIQVRMMenuDelegate" pc="268437671" symbol="onMenuItem"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="27" lineNum="8" parent="globals/CIQVRMMenuDelegate" pc="268437693" symbol="initialize"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMMenuDelegate.mc" id="27" lineNum="9" parent="globals/CIQVRMMenuDelegate" pc="268437695" symbol="initialize"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMView.mc" id="29" lineNum="11" parent="globals/CIQVRMView" pc="268437708" symbol="onLayout"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMView.mc" id="29" lineNum="12" parent="globals/CIQVRMView" pc="268437710" symbol="onLayout"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMView.mc" id="30" lineNum="6" parent="globals/CIQVRMView" pc="268437744" symbol="initialize"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMView.mc" id="30" lineNum="7" parent="globals/CIQVRMView" pc="268437746" symbol="initialize"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMView.mc" id="32" lineNum="21" parent="globals/CIQVRMView" pc="268437759" symbol="onUpdate"/>
+        <entry filename="C:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\optimized\\group000-debug\\source\\source\\CIQVRMView.mc" id="32" lineNum="23" parent="globals/CIQVRMView" pc="268437761" symbol="onUpdate"/>
+        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="33" lineNum="15" parent="globals/Rez/Layouts" pc="268437778" symbol="MainLayout"/>
+        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="33" lineNum="16" parent="globals/Rez/Layouts" pc="268437789" symbol="MainLayout"/>
+        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="33" lineNum="18" parent="globals/Rez/Layouts" pc="268437889" symbol="MainLayout"/>
+        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="33" lineNum="19" parent="globals/Rez/Layouts" pc="268437973" symbol="MainLayout"/>
+        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="33" lineNum="21" parent="globals/Rez/Layouts" pc="268438005" symbol="MainLayout"/>
+        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="34" lineNum="26" parent="globals/Rez/Menus/MainMenu" pc="268438020" symbol="&lt;init&gt;"/>
+        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="35" lineNum="27" parent="globals/Rez/Menus/MainMenu" pc="268438032" symbol="initialize"/>
+        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="35" lineNum="28" parent="globals/Rez/Menus/MainMenu" pc="268438034" symbol="initialize"/>
+        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="35" lineNum="29" parent="globals/Rez/Menus/MainMenu" pc="268438046" symbol="initialize"/>
+        <entry filename="c:\\dev\\Garmin\\GCIQVRM\\CIQVRM\\bin\\gen\\006-B4375-00\\source\\Rez.mcgen" id="35" lineNum="30" parent="globals/Rez/Menus/MainMenu" pc="268438091" symbol="initialize"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="8388639" module="true" symbol="Graphics"/>
         <entry id="8389346" symbol="text"/>
+        <entry id="24" method="true" symbol="onSolarChargerInfo"/>
+        <entry id="18" method="true" symbol="buildSolarChargerUrl"/>
         <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
         <entry id="5" module="true" symbol="globals/Rez/Menus"/>
-        <entry id="26" method="true" symbol="MainLayout"/>
-        <entry id="15" method="true" symbol="filterMostCurrentBattery"/>
-        <entry id="18" method="true" symbol="onTokenReceived"/>
-        <entry id="19" method="true" symbol="parseResponse"/>
+        <entry id="38" method="true" symbol="MainLayout"/>
+        <entry id="19" method="true" symbol="filterMostCurrentBattery"/>
+        <entry id="25" method="true" symbol="onTokenReceived"/>
+        <entry field="true" id="16" symbol="batteryDeviceInstance"/>
+        <entry field="true" id="27" symbol="solarChargerAmount"/>
         <entry field="true" id="8388611" module="true" symbol="Toybox"/>
         <entry id="8" object="true" symbol="CIQVRMDelegate"/>
-        <entry field="true" id="28" symbol="AppName"/>
+        <entry field="true" id="40" symbol="AppName"/>
         <entry id="6" module="true" symbol="globals/Rez/Strings"/>
         <entry id="8389594" symbol="headers"/>
         <entry id="8389080" method="true" symbol="onMenu"/>
         <entry id="8389345" symbol="rezId"/>
-        <entry id="13" method="true" symbol="askForInstalledDevices"/>
+        <entry id="12" method="true" symbol="askForInstalledDevices"/>
         <entry id="8388648" module="true" symbol="WatchUi"/>
-        <entry field="true" id="11" symbol="token"/>
+        <entry field="true" id="31" symbol="token"/>
         <entry id="2" module="true" symbol="globals/Rez"/>
-        <entry field="true" id="31" symbol="prompt"/>
-        <entry id="32" symbol="get_data"/>
+        <entry field="true" id="15" symbol="batteryDeviceBaseUrl"/>
+        <entry field="true" id="43" symbol="prompt"/>
+        <entry id="44" symbol="get_data"/>
         <entry id="8389124" method="true" symbol="onUpdate"/>
         <entry field="true" id="8389065" symbol="locY"/>
         <entry field="true" id="8389064" symbol="locX"/>
-        <entry id="12" method="true" symbol="askBatteryInfo"/>
         <entry id="8388771" module="true" object="true" symbol="Drawables"/>
         <entry id="8389348" symbol="font"/>
-        <entry field="true" id="22" symbol="ciqapp"/>
-        <entry id="21" module="true" symbol="Menus"/>
+        <entry field="true" id="34" symbol="ciqapp"/>
+        <entry id="17" method="true" symbol="buildBatteryUrl"/>
+        <entry id="33" module="true" symbol="Menus"/>
         <entry id="8389275" method="true" symbol="getApp"/>
         <entry id="4" module="true" symbol="globals/Rez/Layouts"/>
-        <entry id="33" symbol="get_token"/>
+        <entry id="45" symbol="get_token"/>
         <entry id="8389122" method="true" symbol="onLayout"/>
         <entry field="true" id="8389063" symbol="identifier"/>
         <entry id="8389349" symbol="justification"/>
+        <entry field="true" id="30" symbol="solarChargerDict"/>
         <entry id="8388637" module="true" symbol="Communications"/>
         <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
-        <entry id="16" method="true" symbol="onBatteryInfo"/>
-        <entry id="27" object="true" symbol="MainMenu"/>
+        <entry id="22" method="true" symbol="onBatteryInfo"/>
+        <entry field="true" id="28" symbol="solarChargerBaseUrl"/>
+        <entry id="39" object="true" symbol="MainMenu"/>
         <entry id="8389844" symbol="responseType"/>
-        <entry id="17" method="true" symbol="onInstalledDevices"/>
+        <entry id="20" method="true" symbol="filterSolarChargers"/>
+        <entry id="23" method="true" symbol="onInstalledDevices"/>
+        <entry field="true" id="21" symbol="idSite"/>
         <entry id="8388786" method="true" symbol="method"/>
         <entry id="7" object="true" symbol="CIQVRMApp"/>
         <entry id="8388644" module="true" symbol="System"/>
+        <entry id="8388645" module="true" symbol="Time"/>
         <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="26" method="true" symbol="parseResponseForCode"/>
         <entry id="8388640" module="true" symbol="Lang"/>
-        <entry field="true" id="23" symbol="LauncherIcon"/>
+        <entry id="11" method="true" symbol="askForBatteryInfo"/>
+        <entry field="true" id="35" symbol="LauncherIcon"/>
         <entry id="8388610" symbol="statics"/>
         <entry id="8389123" method="true" symbol="onShow"/>
-        <entry field="true" id="25" symbol="victron_logo"/>
-        <entry field="true" id="30" symbol="get_token_label"/>
+        <entry field="true" id="37" symbol="victron_logo"/>
+        <entry field="true" id="42" symbol="get_token_label"/>
         <entry id="8389350" module="true" symbol="globals"/>
         <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="13" method="true" symbol="askForSolarChargerInfo"/>
         <entry id="8388702" method="true" symbol="initialize"/>
         <entry id="8389279" method="true" symbol="onStart"/>
-        <entry field="true" id="24" symbol="victron"/>
+        <entry field="true" id="36" symbol="victron"/>
         <entry id="8389280" method="true" symbol="getInitialView"/>
         <entry id="8389281" method="true" symbol="onStop"/>
         <entry id="8389109" method="true" symbol="onMenuItem"/>
         <entry id="8389347" symbol="color"/>
         <entry id="9" object="true" symbol="CIQVRMMenuDelegate"/>
-        <entry id="20" module="true" symbol="Layouts"/>
+        <entry id="32" module="true" symbol="Layouts"/>
         <entry id="10" object="true" symbol="CIQVRMView"/>
         <entry id="8389125" method="true" symbol="onHide"/>
         <entry id="8388635" module="true" symbol="Application"/>
         <entry id="14" method="true" symbol="askForToken"/>
-        <entry field="true" id="29" symbol="get_data_label"/>
+        <entry field="true" id="41" symbol="get_data_label"/>
+        <entry field="true" id="29" symbol="solarChargerDeviceInstance"/>
     </symbolTable>
     <localVars>
-        <entry arg="true" endPc="268435753" name="state" stackId="1" startPc="268435744"/>
-        <entry arg="true" endPc="268435968" name="installedDevices" stackId="1" startPc="268435754"/>
-        <entry endPc="268435967" name="batteryLastCon" stackId="2" startPc="268435757"/>
-        <entry endPc="268435967" name="batteryInstance" stackId="3" startPc="268435757"/>
-        <entry endPc="268435964" name="devices" stackId="4" startPc="268435775"/>
-        <entry endPc="268435961" name="devicesSize" stackId="5" startPc="268435797"/>
-        <entry endPc="268435921" name="deviceDict" stackId="6" startPc="268435818"/>
-        <entry endPc="268435918" name="currentBattyCon" stackId="7" startPc="268435855"/>
-        <entry arg="true" endPc="268436083" name="responseCode" stackId="1" startPc="268436026"/>
-        <entry arg="true" endPc="268436083" name="data" stackId="2" startPc="268436026"/>
-        <entry endPc="268436190" name="params" stackId="1" startPc="268436120"/>
-        <entry arg="true" endPc="268436383" name="response" stackId="1" startPc="268436192"/>
-        <entry arg="true" endPc="268436451" name="responseCode" stackId="1" startPc="268436387"/>
-        <entry arg="true" endPc="268436451" name="installedDevices" stackId="2" startPc="268436387"/>
-        <entry arg="true" endPc="268436498" name="responseCode" stackId="1" startPc="268436452"/>
-        <entry arg="true" endPc="268436498" name="data" stackId="2" startPc="268436452"/>
-        <entry arg="true" endPc="268436695" name="item" stackId="1" startPc="268436587"/>
-        <entry endPc="268436694" name="pre_ciqapp" stackId="2" startPc="268436590"/>
-        <entry arg="true" endPc="268436746" name="dc" stackId="1" startPc="268436711"/>
-        <entry arg="true" endPc="268436780" name="dc" stackId="1" startPc="268436762"/>
-        <entry arg="true" endPc="268437022" name="dc" stackId="1" startPc="268436781"/>
-        <entry endPc="268437022" name="rez_cmp_local_text_1177156138" stackId="2" startPc="268436792"/>
-        <entry endPc="268437022" name="rez_cmp_local_bitmap_victron" stackId="3" startPc="268436792"/>
+        <entry endPc="268435640" name="pre_batteryDeviceInstance" stackId="1" startPc="268435590"/>
+        <entry arg="true" endPc="268435728" name="responseCode" stackId="1" startPc="268435642"/>
+        <entry arg="true" endPc="268435728" name="data" stackId="2" startPc="268435642"/>
+        <entry arg="true" endPc="268435808" name="batteryUrl" stackId="1" startPc="268435729"/>
+        <entry arg="true" endPc="268436047" name="responseCode" stackId="1" startPc="268435866"/>
+        <entry arg="true" endPc="268436047" name="data" stackId="2" startPc="268435866"/>
+        <entry arg="true" endPc="268436197" name="index" stackId="1" startPc="268436048"/>
+        <entry endPc="268436196" name="keys" stackId="2" startPc="268436095"/>
+        <entry endPc="268436196" name="i" stackId="3" startPc="268436124"/>
+        <entry endPc="268436271" name="params" stackId="1" startPc="268436201"/>
+        <entry arg="true" endPc="268436351" name="responseCode" stackId="1" startPc="268436273"/>
+        <entry arg="true" endPc="268436351" name="installedDevices" stackId="2" startPc="268436273"/>
+        <entry arg="true" endPc="268436361" name="state" stackId="1" startPc="268436352"/>
+        <entry arg="true" endPc="268436422" name="responseCode" stackId="1" startPc="268436365"/>
+        <entry arg="true" endPc="268436422" name="data" stackId="2" startPc="268436365"/>
+        <entry arg="true" endPc="268436737" name="installedDevices" stackId="1" startPc="268436506"/>
+        <entry endPc="268436736" name="batteryLastCon" stackId="2" startPc="268436509"/>
+        <entry endPc="268436736" name="currentBatteryInstance" stackId="3" startPc="268436509"/>
+        <entry endPc="268436714" name="devices" stackId="4" startPc="268436527"/>
+        <entry endPc="268436692" name="devicesSize" stackId="5" startPc="268436549"/>
+        <entry endPc="268436692" name="i" stackId="6" startPc="268436570"/>
+        <entry endPc="268436682" name="deviceDict" stackId="7" startPc="268436570"/>
+        <entry arg="true" endPc="268437055" name="installedDevices" stackId="1" startPc="268436738"/>
+        <entry endPc="268437054" name="now" stackId="2" startPc="268436741"/>
+        <entry endPc="268437032" name="devices" stackId="3" startPc="268436793"/>
+        <entry endPc="268437010" name="devicesSize" stackId="4" startPc="268436815"/>
+        <entry endPc="268437000" name="deviceDict" stackId="5" startPc="268436836"/>
+        <entry endPc="268437000" name="name" stackId="6" startPc="268436836"/>
+        <entry arg="true" endPc="268437135" name="solarUrl" stackId="1" startPc="268437056"/>
+        <entry endPc="268437199" name="pre_idSite" stackId="1" startPc="268437139"/>
+        <entry arg="true" endPc="268437495" name="response" stackId="1" startPc="268437201"/>
+        <entry arg="true" endPc="268437495" name="code" stackId="2" startPc="268437201"/>
+        <entry arg="true" endPc="268437495" name="valueKey" stackId="3" startPc="268437201"/>
+        <entry arg="true" endPc="268437495" name="isSum" stackId="4" startPc="268437201"/>
+        <entry endPc="268437494" name="result" stackId="5" startPc="268437204"/>
+        <entry endPc="268437494" name="sumOfWatts" stackId="6" startPc="268437204"/>
+        <entry endPc="268437435" name="dataNumbersDict" stackId="7" startPc="268437256"/>
+        <entry endPc="268437435" name="dataLength" stackId="8" startPc="268437256"/>
+        <entry endPc="268437435" name="keys" stackId="9" startPc="268437256"/>
+        <entry endPc="268437425" name="key" stackId="10" startPc="268437295"/>
+        <entry endPc="268437425" name="value" stackId="11" startPc="268437295"/>
+        <entry arg="true" endPc="268437692" name="item" stackId="1" startPc="268437584"/>
+        <entry endPc="268437691" name="pre_ciqapp" stackId="2" startPc="268437587"/>
+        <entry arg="true" endPc="268437743" name="dc" stackId="1" startPc="268437708"/>
+        <entry arg="true" endPc="268437777" name="dc" stackId="1" startPc="268437759"/>
+        <entry arg="true" endPc="268438019" name="dc" stackId="1" startPc="268437778"/>
+        <entry endPc="268438019" name="rez_cmp_local_text_3823395461" stackId="2" startPc="268437789"/>
+        <entry endPc="268438019" name="rez_cmp_local_bitmap_victron" stackId="3" startPc="268437789"/>
     </localVars>
     <deviceInfo deviceVersion="4866e5192c0c99025597cd8e6e841f3d774b64f7" partNumber="006-B4375-00"/>
     <annotations>
@@ -210,86 +319,110 @@
     </annotations>
     <dataEntryOffsetMappings>
         <dataEntry label="globals" offset="67" parentId="" symbolId="globals" type="module"/>
-        <dataEntry label="globals/CIQVRMApp" offset="161" parentId="globals" symbolId="CIQVRMApp" type="class"/>
-        <dataEntry label="globals/CIQVRMDelegate" offset="304" parentId="globals" symbolId="CIQVRMDelegate" type="class"/>
-        <dataEntry label="globals/Rez" offset="357" parentId="globals" symbolId="Rez" type="module"/>
-        <dataEntry label="globals/CIQVRMMenuDelegate" offset="419" parentId="globals" symbolId="CIQVRMMenuDelegate" type="class"/>
-        <dataEntry label="globals/CIQVRMView" offset="481" parentId="globals" symbolId="CIQVRMView" type="class"/>
-        <dataEntry label="globals/Rez/Drawables" offset="561" parentId="Rez" symbolId="Drawables" type="module"/>
-        <dataEntry label="globals/Rez/Layouts" offset="614" parentId="Rez" symbolId="Layouts" type="module"/>
-        <dataEntry label="globals/Rez/Menus" offset="649" parentId="Rez" symbolId="Menus" type="module"/>
-        <dataEntry label="globals/Rez/Strings" offset="684" parentId="Rez" symbolId="Strings" type="module"/>
-        <dataEntry label="globals/Rez/Menus/MainMenu" offset="746" parentId="Menus" symbolId="MainMenu" type="class"/>
+        <dataEntry label="globals/CIQVRMApp" offset="152" parentId="globals" symbolId="CIQVRMApp" type="class"/>
+        <dataEntry label="globals/CIQVRMDelegate" offset="412" parentId="globals" symbolId="CIQVRMDelegate" type="class"/>
+        <dataEntry label="globals/Rez" offset="465" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/CIQVRMMenuDelegate" offset="527" parentId="globals" symbolId="CIQVRMMenuDelegate" type="class"/>
+        <dataEntry label="globals/CIQVRMView" offset="589" parentId="globals" symbolId="CIQVRMView" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="669" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="722" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="757" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="792" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/Menus/MainMenu" offset="854" parentId="Menus" symbolId="MainMenu" type="class"/>
     </dataEntryOffsetMappings>
     <functions>
         <functionEntry accessMode="public" endPc="268435480" name="getApp" startPc="268435460">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435492" name="&lt;init&gt;" parent="CIQVRMApp" startPc="268435481">
+        <functionEntry accessMode="public" endPc="268435501" name="&lt;init&gt;" parent="CIQVRMApp" startPc="268435481">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435504" name="&lt;init&gt;" parent="CIQVRMDelegate" startPc="268435493">
+        <functionEntry accessMode="public" endPc="268435513" name="&lt;init&gt;" parent="CIQVRMDelegate" startPc="268435502">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435524" name="&lt;init&gt;" parent="Rez" startPc="268435505">
+        <functionEntry accessMode="public" endPc="268435533" name="&lt;init&gt;" parent="Rez" startPc="268435514">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435565" name="&lt;init&gt;" parent="CIQVRMMenuDelegate" startPc="268435525">
+        <functionEntry accessMode="public" endPc="268435574" name="&lt;init&gt;" parent="CIQVRMMenuDelegate" startPc="268435534">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435577" name="&lt;init&gt;" parent="CIQVRMView" startPc="268435566">
+        <functionEntry accessMode="public" endPc="268435586" name="&lt;init&gt;" parent="CIQVRMView" startPc="268435575">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435660" name="askBatteryInfo" parent="CIQVRMApp" startPc="268435578">
+        <functionEntry accessMode="public" endPc="268435641" name="buildBatteryUrl" parent="CIQVRMApp" startPc="268435587">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435743" name="askForInstalledDevices" parent="CIQVRMApp" startPc="268435661">
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" endPc="268435753" name="onStart" parent="CIQVRMApp" startPc="268435744">
-            <param id="state"/>
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" endPc="268435968" name="filterMostCurrentBattery" parent="CIQVRMApp" startPc="268435754">
-            <param id="installedDevices"/>
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" endPc="268436025" name="getInitialView" parent="CIQVRMApp" startPc="268435969">
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" endPc="268436083" name="onTokenReceived" parent="CIQVRMApp" startPc="268436026">
+        <functionEntry accessMode="public" endPc="268435728" name="onSolarChargerInfo" parent="CIQVRMApp" startPc="268435642">
             <param id="responseCode"/>
             <param id="data"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436116" name="initialize" parent="CIQVRMApp" startPc="268436084">
+        <functionEntry accessMode="public" endPc="268435808" name="askForBatteryInfo" parent="CIQVRMApp" startPc="268435729">
+            <param id="batteryUrl"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436191" name="askForToken" parent="CIQVRMApp" startPc="268436117">
+        <functionEntry accessMode="public" endPc="268435865" name="getInitialView" parent="CIQVRMApp" startPc="268435809">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436383" name="parseResponse" parent="CIQVRMApp" startPc="268436192">
+        <functionEntry accessMode="public" endPc="268436047" name="onTokenReceived" parent="CIQVRMApp" startPc="268435866">
+            <param id="responseCode"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436197" name="buildSolarChargerUrl" parent="CIQVRMApp" startPc="268436048">
+            <param id="index"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436272" name="askForToken" parent="CIQVRMApp" startPc="268436198">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436351" name="onInstalledDevices" parent="CIQVRMApp" startPc="268436273">
+            <param id="responseCode"/>
+            <param id="installedDevices"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436361" name="onStart" parent="CIQVRMApp" startPc="268436352">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436364" name="onStop" parent="CIQVRMApp" startPc="268436362">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436422" name="onBatteryInfo" parent="CIQVRMApp" startPc="268436365">
+            <param id="responseCode"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436505" name="askForInstalledDevices" parent="CIQVRMApp" startPc="268436423">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436737" name="filterMostCurrentBattery" parent="CIQVRMApp" startPc="268436506">
+            <param id="installedDevices"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437055" name="filterSolarChargers" parent="CIQVRMApp" startPc="268436738">
+            <param id="installedDevices"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437135" name="askForSolarChargerInfo" parent="CIQVRMApp" startPc="268437056">
+            <param id="solarUrl"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437200" name="initialize" parent="CIQVRMApp" startPc="268437136">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437495" name="parseResponseForCode" parent="CIQVRMApp" startPc="268437201">
             <param id="response"/>
+            <param id="code"/>
+            <param id="valueKey"/>
+            <param id="isSum"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436386" name="onStop" parent="CIQVRMApp" startPc="268436384">
-            <param id="state"/>
+        <functionEntry accessMode="public" endPc="268437568" name="onMenu" parent="CIQVRMDelegate" startPc="268437496">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436451" name="onInstalledDevices" parent="CIQVRMApp" startPc="268436387">
-            <param id="responseCode"/>
-            <param id="installedDevices"/>
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" endPc="268436498" name="onBatteryInfo" parent="CIQVRMApp" startPc="268436452">
-            <param id="responseCode"/>
-            <param id="data"/>
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" endPc="268436571" name="onMenu" parent="CIQVRMDelegate" startPc="268436499">
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" endPc="268436586" name="initialize" parent="CIQVRMDelegate" startPc="268436572">
+        <functionEntry accessMode="public" endPc="268437583" name="initialize" parent="CIQVRMDelegate" startPc="268437569">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
@@ -304,38 +437,38 @@
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436695" name="onMenuItem" parent="CIQVRMMenuDelegate" startPc="268436587">
+        <functionEntry accessMode="public" endPc="268437692" name="onMenuItem" parent="CIQVRMMenuDelegate" startPc="268437584">
             <param id="item"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436710" name="initialize" parent="CIQVRMMenuDelegate" startPc="268436696">
+        <functionEntry accessMode="public" endPc="268437707" name="initialize" parent="CIQVRMMenuDelegate" startPc="268437693">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="onShow" parent="CIQVRMView">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436746" name="onLayout" parent="CIQVRMView" startPc="268436711">
+        <functionEntry accessMode="public" endPc="268437743" name="onLayout" parent="CIQVRMView" startPc="268437708">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436761" name="initialize" parent="CIQVRMView" startPc="268436747">
+        <functionEntry accessMode="public" endPc="268437758" name="initialize" parent="CIQVRMView" startPc="268437744">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="onHide" parent="CIQVRMView">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436780" name="onUpdate" parent="CIQVRMView" startPc="268436762">
+        <functionEntry accessMode="public" endPc="268437777" name="onUpdate" parent="CIQVRMView" startPc="268437759">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437022" name="MainLayout" parent="Layouts" startPc="268436781">
+        <functionEntry accessMode="public" endPc="268438019" name="MainLayout" parent="Layouts" startPc="268437778">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437034" name="&lt;init&gt;" parent="MainMenu" startPc="268437023">
+        <functionEntry accessMode="public" endPc="268438031" name="&lt;init&gt;" parent="MainMenu" startPc="268438020">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437139" name="initialize" parent="MainMenu" startPc="268437035">
+        <functionEntry accessMode="public" endPc="268438136" name="initialize" parent="MainMenu" startPc="268438032">
             <documentation/>
         </functionEntry>
     </functions>

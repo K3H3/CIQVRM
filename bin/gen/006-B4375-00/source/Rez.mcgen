@@ -13,12 +13,12 @@ module Rez {
 
     module Layouts {
         function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
-            var rez_cmp_local_text_1177156138 = new WatchUi.Text({:color=>Graphics.COLOR_WHITE, :locX=>(260 * 0.5), :locY=>5, :text=>$.Rez.Strings.prompt, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_MEDIUM});
+            var rez_cmp_local_text_3823395461 = new WatchUi.Text({:color=>Graphics.COLOR_WHITE, :locX=>(260 * 0.5), :locY=>5, :text=>$.Rez.Strings.prompt, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_MEDIUM});
 
             var rez_cmp_local_bitmap_victron = new WatchUi.Bitmap({:identifier=>"victron", :rezId=>$.Rez.Drawables.victron, :locX=>WatchUi.LAYOUT_HALIGN_CENTER, :locY=>-50});
             rez_cmp_local_bitmap_victron.setLocation(((260 - rez_cmp_local_bitmap_victron.width) * 0.5), rez_cmp_local_bitmap_victron.locY);
 
-            return [rez_cmp_local_text_1177156138, rez_cmp_local_bitmap_victron] as Array<WatchUi.Drawable>;
+            return [rez_cmp_local_text_3823395461, rez_cmp_local_bitmap_victron] as Array<WatchUi.Drawable>;
         }
     } // Layouts
 

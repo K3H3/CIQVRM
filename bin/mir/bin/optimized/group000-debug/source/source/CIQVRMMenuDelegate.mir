@@ -52,7 +52,7 @@ C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMMen
         invoke %tmp.8 %tmp.9(%tmp.10);
 [ "C:\dev\Garmin\GCIQVRM\CIQVRM\bin\optimized\group000-debug\source\source\CIQVRMMenuDelegate.mc" 17 6 ]
         %tmp.11 = lgetv %pre_ciqapp.1;
-        %tmp.12 = getv function %tmp.11 :askBatteryInfo;
+        %tmp.12 = getv function %tmp.11 :askForToken;
         invoke %tmp.11 %tmp.12();
 C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMMenuDelegate_mc_15_27_18_4_stop:
         goto @C_dev_Garmin_GCIQVRM_CIQVRM_bin_optimized_group000_debug_source_source_CIQVRMMenuDelegate_mc_15_4_22_4_if_end;
