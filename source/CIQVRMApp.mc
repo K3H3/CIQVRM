@@ -3,6 +3,7 @@ import Toybox.Lang;
 import Toybox.WatchUi;
 using Toybox.System;
 using Toybox.Communications;
+//using Toybox.Application.Storage;
 
 class CIQVRMApp extends Application.AppBase {
   /* to do:
@@ -32,7 +33,6 @@ class CIQVRMApp extends Application.AppBase {
       "https://vrmapi.victronenergy.com/v2/installations/" +
       idSite +
       "/widgets/SolarChargerSummary?instance=";
-    //System.println("app-initialize()");
   }
 
   function askForToken() {
@@ -118,7 +118,6 @@ class CIQVRMApp extends Application.AppBase {
 
   // onStart() is called on application start up
   function onStart(state as Dictionary?) as Void {
-    // System.println("app-onStart()");
     askForToken();
   }
 
@@ -127,7 +126,6 @@ class CIQVRMApp extends Application.AppBase {
 
   // Return the initial view of your application here
   function getInitialView() as [Views] or [Views, InputDelegates] {
-    // System.println("app-getInitialView()");
     return [new CIQVRMView(), new CIQVRMDelegate()];
   }
 
@@ -143,6 +141,7 @@ class CIQVRMApp extends Application.AppBase {
     if (responseCode == 200) {
       if (data != null && data instanceof Dictionary && data["token"] != null) {
         token = (data as Dictionary)["token"]; // set token to data["token"]
+        Storage.setValue("token", token);
       } else {
         System.println("Error: Invalid data received");
         return;
@@ -238,7 +237,6 @@ class CIQVRMApp extends Application.AppBase {
         solarChargerUrl =
           solarChargerBaseUrl + solarChargerDeviceInstance.toString();
         var sumOfCharger = askForSolarChargerInfo(solarChargerUrl);
-        System.println(solarChargerUrl);
       }
     }
   }
@@ -260,18 +258,29 @@ class CIQVRMApp extends Application.AppBase {
     data as Null or Dictionary or String
   ) as Void {
     var sumNeeded as Boolean = true;
+
+    //instance 280, 289 are not responding
+
     if (responseCode == 200) {
       // get combined Watts for all solar chargers
+      var instanceAnswerReceived = parseResponseForCode(
+        data,
+        "ScS",
+        "instance",
+        false
+      );
       parseResponseForCode(data, "ScW", "formattedValue", sumNeeded);
+      //askForSolarChargerInfo(solarChargerBaseUrl + "280");
+      askForSolarChargerInfo(solarChargerBaseUrl + "289");
     } else if (responseCode == -101) {
-      System.println("oSC KEINE AHNUNG DIGGER");
+      //System.println("oSC KEINE AHNUNG DIGGER, RC: -101");
     } else {
       System.println("oSC Response: " + responseCode); // print response code
     }
   }
 
   function filterSolarChargers(installedDevices) {
-    // check if top level in installedDevices JSON is "records" key, and create an array of the underlying data
+    // check if top level in installedDevices JSON is "records" key, and create an dict of the underlying data
     var timeOutTime as Number = 1800;
     var now = new Time.Moment(Time.now().value());
     var solarChargerInstance = null;
@@ -289,19 +298,19 @@ class CIQVRMApp extends Application.AppBase {
           var name = deviceDict["name"];
 
           if (name.toString().equals("Solar Charger")) {
-            //create 2 sized array of solar chargers with index number and instance number
+            //create 2 sized dict of solar chargers with index number and instance number
             solarChargerInstance = deviceDict["instance"];
             solarChargerAmount++;
             solarChargerDict[solarChargerAmount] = solarChargerInstance;
 
-            // System.println(
-            //   "Solar Charger Dict: " +
-            //     solarChargerDict +
-            //     " + solarChargerAmount: " +
-            //     solarChargerAmount +
-            //     " + solarChargerInstance " +
-            //     solarChargerInstance
-            // );
+            System.println(
+              "Solar Charger Dict: " +
+                solarChargerDict +
+                " + solarChargerAmount: " +
+                solarChargerAmount +
+                " + solarChargerInstance " +
+                solarChargerInstance
+            );
 
             var currentCon = deviceDict["lastConnection"].toNumber();
             var diff = now.subtract(new Time.Moment(currentCon)).value();
