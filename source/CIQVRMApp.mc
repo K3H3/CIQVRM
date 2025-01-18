@@ -3,6 +3,7 @@ import Toybox.Lang;
 import Toybox.WatchUi;
 using Toybox.System;
 using Toybox.Communications;
+using Toybox.Timer;
 //using Toybox.Application.Storage;
 
 class CIQVRMApp extends Application.AppBase {
@@ -22,6 +23,9 @@ class CIQVRMApp extends Application.AppBase {
   var solarChargerDeviceInstance = null;
   var solarChargerBaseUrl as String;
   var solarChargerDict = {};
+  var receivedArr = [];
+  var requestTimer = new Timer.Timer();
+  var askOnceFlag as Boolean = false;
 
   function initialize() {
     AppBase.initialize();
@@ -107,7 +111,6 @@ class CIQVRMApp extends Application.AppBase {
       }, // set token
       :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
     };
-
     Communications.makeWebRequest(
       solarUrl,
       null,
@@ -262,6 +265,7 @@ class CIQVRMApp extends Application.AppBase {
     //instance 280, 289 are not responding
 
     if (responseCode == 200) {
+      //System.println(data);
       // get combined Watts for all solar chargers
       var instanceAnswerReceived = parseResponseForCode(
         data,
@@ -269,13 +273,47 @@ class CIQVRMApp extends Application.AppBase {
         "instance",
         false
       );
-      parseResponseForCode(data, "ScW", "formattedValue", sumNeeded);
-      //askForSolarChargerInfo(solarChargerBaseUrl + "280");
-      askForSolarChargerInfo(solarChargerBaseUrl + "289");
+      receivedArr.add(instanceAnswerReceived.toString());
+      var sumAnswerReceived = parseResponseForCode(
+        data,
+        "ScW",
+        "formattedValue",
+        sumNeeded
+      );
     } else if (responseCode == -101) {
+      askOnceFlag = true;
+      requestTimer.start(method(:receivedTimerCallback), 3000, true);
       //System.println("oSC KEINE AHNUNG DIGGER, RC: -101");
+      if (data == null) {
+        System.println("No data returned; cannot parse response.");
+        return;
+      }
     } else {
       System.println("oSC Response: " + responseCode); // print response code
+    }
+  }
+
+  function receivedTimerCallback() {
+    var dictValues = solarChargerDict.values();
+    dictValues.sort(null);
+    var recArr = receivedArr;
+    recArr.sort(null);
+
+    if (askOnceFlag) {
+      for (var i = 0; i < dictValues.size(); i++) {
+        for (var j = 0; j < recArr.size(); j++) {
+          if (dictValues[i].toString().equals(recArr[j])) {
+            dictValues.remove(dictValues[i]);
+            break;
+          }
+        }
+      }
+      askOnceFlag = false;
+      for (var i = 0; i < dictValues.size(); i++) {
+        var newReqSolarChargerUrl =
+          solarChargerBaseUrl + dictValues[i].toString();
+        askForSolarChargerInfo(newReqSolarChargerUrl);
+      }
     }
   }
 
