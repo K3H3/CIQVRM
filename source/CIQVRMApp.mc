@@ -8,6 +8,7 @@ using Toybox.Timer;
 
 class CIQVRMApp extends Application.AppBase {
   /* to do:
+ - sum up solar charger values
  - input for credentials
  - input for installation id
  - display data
@@ -262,10 +263,7 @@ class CIQVRMApp extends Application.AppBase {
   ) as Void {
     var sumNeeded as Boolean = true;
 
-    //instance 280, 289 are not responding
-
     if (responseCode == 200) {
-      //System.println(data);
       // get combined Watts for all solar chargers
       var instanceAnswerReceived = parseResponseForCode(
         data,
@@ -281,13 +279,9 @@ class CIQVRMApp extends Application.AppBase {
         sumNeeded
       );
     } else if (responseCode == -101) {
+      //System.println("-101");
       askOnceFlag = true;
-      requestTimer.start(method(:receivedTimerCallback), 3000, true);
-      //System.println("oSC KEINE AHNUNG DIGGER, RC: -101");
-      if (data == null) {
-        System.println("No data returned; cannot parse response.");
-        return;
-      }
+      requestTimer.start(method(:receivedTimerCallback), 500, false);
     } else {
       System.println("oSC Response: " + responseCode); // print response code
     }
@@ -296,19 +290,24 @@ class CIQVRMApp extends Application.AppBase {
   function receivedTimerCallback() {
     var dictValues = solarChargerDict.values();
     dictValues.sort(null);
-    var recArr = receivedArr;
-    recArr.sort(null);
+
+    //var recArr = receivedArr;
+    receivedArr.sort(null);
 
     if (askOnceFlag) {
       for (var i = 0; i < dictValues.size(); i++) {
-        for (var j = 0; j < recArr.size(); j++) {
-          if (dictValues[i].toString().equals(recArr[j])) {
+        for (var j = 0; j < receivedArr.size(); j++) {
+          if (dictValues[i].toString().equals(receivedArr[j])) {
             dictValues.remove(dictValues[i]);
-            break;
           }
         }
       }
-      askOnceFlag = false;
+
+      if (dictValues.size() == 0) {
+        askOnceFlag = false;
+        return;
+      }
+
       for (var i = 0; i < dictValues.size(); i++) {
         var newReqSolarChargerUrl =
           solarChargerBaseUrl + dictValues[i].toString();
@@ -341,14 +340,14 @@ class CIQVRMApp extends Application.AppBase {
             solarChargerAmount++;
             solarChargerDict[solarChargerAmount] = solarChargerInstance;
 
-            System.println(
-              "Solar Charger Dict: " +
-                solarChargerDict +
-                " + solarChargerAmount: " +
-                solarChargerAmount +
-                " + solarChargerInstance " +
-                solarChargerInstance
-            );
+            // System.println(
+            //   "Solar Charger Dict: " +
+            //     solarChargerDict +
+            //     " + solarChargerAmount: " +
+            //     solarChargerAmount +
+            //     " + solarChargerInstance " +
+            //     solarChargerInstance
+            // );
 
             var currentCon = deviceDict["lastConnection"].toNumber();
             var diff = now.subtract(new Time.Moment(currentCon)).value();
