@@ -14,19 +14,26 @@ class CIQVRMApp extends Application.AppBase {
  - display data
   */
 
-  var token = null;
-  var idSite as Number = IDSITE;
+  // Private member variables for sensitive data
+  private var token = null;
+  private var idSite as Number = IDSITE; // Consider externalizing for security.
 
-  var batteryDeviceInstance = null;
-  var batteryDeviceBaseUrl as String;
+  // URLs for API interactions
+  private var batteryDeviceBaseUrl as String;
+  private var solarChargerBaseUrl as String;
 
-  var solarChargerAmount as Number = 0;
-  var solarChargerDeviceInstance = null;
-  var solarChargerBaseUrl as String;
-  var solarChargerDict = {};
-  var receivedArr = [];
-  var requestTimer = new Timer.Timer();
-  var askOnceFlag as Boolean = false;
+  // Device-related data
+  private var batteryDeviceInstance = null;
+  private var solarChargerAmount as Number = 0;
+  private var solarChargerDeviceInstance = null;
+  private var solarChargerDict = {}; // Dictionary to store solar charger data
+  private var receivedArr = []; // Array to handle responses
+
+  // Timer and flag for periodic requests
+  private var requestTimer = new Timer.Timer();
+  private var periodicalTimer = new Timer.Timer();
+  private var askOnceFlag as Boolean = false;
+
 
   function initialize() {
     AppBase.initialize();
