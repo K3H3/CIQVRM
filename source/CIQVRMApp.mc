@@ -35,6 +35,9 @@ class CIQVRMApp extends Application.AppBase {
   private var periodicalTimer = new Timer.Timer();
   private var askOnceFlag as Boolean = false;
 
+  // Variables to store persistent data
+  private var totalScW as Number = 0;
+  private var totalSoC as Number = 0;
 
   function initialize() {
     AppBase.initialize();
@@ -97,7 +100,11 @@ class CIQVRMApp extends Application.AppBase {
   }
 
   function onPeriodicRoutine() {
+    System.println("Total ScW: " + totalScW);
+    System.println("Total SoC: " + totalSoC);
     receivedArr = [];
+    totalScW = 0;
+    totalSoC = 0;
     askForBatteryInfo(batteryDeviceBaseUrl + batteryDeviceInstance);
     buildSolarChargerUrl(solarChargerAmount);
   }
@@ -266,7 +273,16 @@ class CIQVRMApp extends Application.AppBase {
   ) as Void {
     var sumNeeded as Boolean = false;
     if (responseCode == 200) {
-      parseResponseForCode(data, "SOC", "valueFormattedWithUnit", sumNeeded);
+      var socValue = parseResponseForCode(
+        data,
+        "SOC",
+        "valueFormattedWithUnit",
+        sumNeeded
+      );
+      if (socValue != null) {
+        totalSoC += socValue.toNumber();
+      }
+      Storage.setValue("totalSoC", totalSoC);
     } else {
       System.println("Response: " + responseCode); // print response code
     }
@@ -293,6 +309,10 @@ class CIQVRMApp extends Application.AppBase {
         "formattedValue",
         sumNeeded
       );
+      if (sumAnswerReceived != null) {
+        totalScW += sumAnswerReceived.toNumber();
+      }
+      Storage.setValue("totalScW", totalScW);
     } else if (responseCode == -101) {
       //System.println("-101");
       askOnceFlag = true;
@@ -406,7 +426,7 @@ class CIQVRMApp extends Application.AppBase {
             if (value != null && value.toString().equals(code)) {
               result = dataNumbersDict[key][valueKey];
 
-              System.println("Result for " + code + ": " + result);
+              // System.println("Result for " + code + ": " + result);
             }
           }
         }
