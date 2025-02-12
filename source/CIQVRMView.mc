@@ -1,5 +1,6 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
+using Toybox.Application.Storage;
 
 class CIQVRMView extends WatchUi.View {
 
@@ -22,6 +23,19 @@ class CIQVRMView extends WatchUi.View {
     function onUpdate(dc as Dc) as Void {
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
+        draw(dc);
+    }
+
+    public function draw(dc as Dc) as Void {
+        var font = Graphics.FONT_MEDIUM;
+        var totalScW = Storage.getValue("totalScW");
+        var totalSoC = Storage.getValue("totalSoC");
+
+        dc.clear();
+        dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2 - 20, font, "Total ScW: " + totalScW.toString(),
+                Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2 + 20, font, "Total SoC: " + totalSoC.toString(),
+                Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     // Called when this View is removed from the screen. Save the
