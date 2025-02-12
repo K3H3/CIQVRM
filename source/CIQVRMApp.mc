@@ -21,6 +21,7 @@ class CIQVRMApp extends Application.AppBase {
   // URLs for API interactions
   private var batteryDeviceBaseUrl as String;
   private var solarChargerBaseUrl as String;
+  private var installationBaseUrl as String;
 
   // Device-related data
   private var batteryDeviceInstance = null;
@@ -37,14 +38,16 @@ class CIQVRMApp extends Application.AppBase {
 
   function initialize() {
     AppBase.initialize();
+    constructBaseUrls();
+  }
+
+  private function constructBaseUrls() {
+    installationBaseUrl =
+      "https://vrmapi.victronenergy.com/v2/installations/" + idSite;
     batteryDeviceBaseUrl =
-      "https://vrmapi.victronenergy.com/v2/installations/" +
-      idSite +
-      "/widgets/BatterySummary?instance=";
+      installationBaseUrl + "/widgets/BatterySummary?instance=";
     solarChargerBaseUrl =
-      "https://vrmapi.victronenergy.com/v2/installations/" +
-      idSite +
-      "/widgets/SolarChargerSummary?instance=";
+      installationBaseUrl + "/widgets/SolarChargerSummary?instance=";
   }
 
   function askForToken() {
@@ -75,9 +78,7 @@ class CIQVRMApp extends Application.AppBase {
   }
 
   function askForInstalledDevices() {
-    var sys_overview_url =
-      "https://vrmapi.victronenergy.com/v2/installations/IDSITE/system-overview";
-
+    
     var options = {
       :method => Communications.HTTP_REQUEST_METHOD_GET,
       :headers => {
@@ -87,7 +88,7 @@ class CIQVRMApp extends Application.AppBase {
     };
 
     Communications.makeWebRequest(
-      sys_overview_url,
+      installationBaseUrl + "/system-overview",
       null,
       options,
       method(:onInstalledDevices)
