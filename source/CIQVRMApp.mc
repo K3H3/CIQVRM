@@ -39,6 +39,7 @@ class CIQVRMApp extends Application.AppBase {
   function initialize() {
     AppBase.initialize();
     constructBaseUrls();
+    periodicalTimer.start(method(:onPeriodicRoutine), 15000, true);
   }
 
   private function constructBaseUrls() {
@@ -78,7 +79,7 @@ class CIQVRMApp extends Application.AppBase {
   }
 
   function askForInstalledDevices() {
-    
+
     var options = {
       :method => Communications.HTTP_REQUEST_METHOD_GET,
       :headers => {
@@ -93,6 +94,12 @@ class CIQVRMApp extends Application.AppBase {
       options,
       method(:onInstalledDevices)
     );
+  }
+
+  function onPeriodicRoutine() {
+    receivedArr = [];
+    askForBatteryInfo(batteryDeviceBaseUrl + batteryDeviceInstance);
+    buildSolarChargerUrl(solarChargerAmount);
   }
 
   function askForBatteryInfo(batteryUrl) {
