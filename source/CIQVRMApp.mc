@@ -4,7 +4,6 @@ import Toybox.WatchUi;
 using Toybox.System;
 using Toybox.Communications;
 using Toybox.Timer;
-//using Toybox.Application.Storage;
 
 class CIQVRMApp extends Application.AppBase {
   /* to do:
@@ -82,7 +81,6 @@ class CIQVRMApp extends Application.AppBase {
   }
 
   function askForInstalledDevices() {
-
     var options = {
       :method => Communications.HTTP_REQUEST_METHOD_GET,
       :headers => {
@@ -131,7 +129,7 @@ class CIQVRMApp extends Application.AppBase {
       :method => Communications.HTTP_REQUEST_METHOD_GET,
       :headers => {
         "X-Authorization" => "Bearer " + token,
-      }, // set token
+      },
       :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
     };
     Communications.makeWebRequest(
@@ -142,12 +140,10 @@ class CIQVRMApp extends Application.AppBase {
     );
   }
 
-  // onStart() is called on application start up
   function onStart(state as Dictionary?) as Void {
     askForToken();
   }
 
-  // onStop() is called when your application is exiting
   function onStop(state as Dictionary?) as Void {}
 
   // Return the initial view of your application here
@@ -155,7 +151,6 @@ class CIQVRMApp extends Application.AppBase {
     return [new CIQVRMView(), new CIQVRMDelegate()];
   }
 
-  // set up the response callback function
   function onTokenReceived(
     responseCode as Number,
     data as Null or Dictionary or String
@@ -242,8 +237,7 @@ class CIQVRMApp extends Application.AppBase {
 
   function buildBatteryUrl() {
     if (batteryDeviceInstance != null) {
-      var batteryDeviceUrl = "";
-      batteryDeviceUrl = batteryDeviceBaseUrl + batteryDeviceInstance;
+      var batteryDeviceUrl = batteryDeviceBaseUrl + batteryDeviceInstance;
       askForBatteryInfo(batteryDeviceUrl);
     } else {
       System.println("Battery Device Instance not found");
@@ -293,9 +287,7 @@ class CIQVRMApp extends Application.AppBase {
     data as Null or Dictionary or String
   ) as Void {
     var sumNeeded as Boolean = true;
-
     if (responseCode == 200) {
-      // get combined Watts for all solar chargers
       var instanceAnswerReceived = parseResponseForCode(
         data,
         "ScS",
@@ -314,7 +306,6 @@ class CIQVRMApp extends Application.AppBase {
       }
       Storage.setValue("totalScW", totalScW);
     } else if (responseCode == -101) {
-      //System.println("-101");
       askOnceFlag = true;
       requestTimer.start(method(:receivedTimerCallback), 500, false);
     } else {
@@ -325,10 +316,7 @@ class CIQVRMApp extends Application.AppBase {
   function receivedTimerCallback() {
     var dictValues = solarChargerDict.values();
     dictValues.sort(null);
-
-    //var recArr = receivedArr;
     receivedArr.sort(null);
-
     if (askOnceFlag) {
       for (var i = 0; i < dictValues.size(); i++) {
         for (var j = 0; j < receivedArr.size(); j++) {
@@ -337,12 +325,10 @@ class CIQVRMApp extends Application.AppBase {
           }
         }
       }
-
       if (dictValues.size() == 0) {
         askOnceFlag = false;
         return;
       }
-
       for (var i = 0; i < dictValues.size(); i++) {
         var newReqSolarChargerUrl =
           solarChargerBaseUrl + dictValues[i].toString();
@@ -352,42 +338,23 @@ class CIQVRMApp extends Application.AppBase {
   }
 
   function filterSolarChargers(installedDevices) {
-    // check if top level in installedDevices JSON is "records" key, and create an dict of the underlying data
     var timeOutTime as Number = 1800;
     var now = new Time.Moment(Time.now().value());
     var solarChargerInstance = null;
-
     if (installedDevices["records"] != null) {
       var records = installedDevices["records"];
       var devices = records["devices"];
-
       if (devices != null) {
         var devicesSize = devices.size();
-
-        // iterate through each device
         for (var i = 0; i < devicesSize; i++) {
           var deviceDict = devices[i];
           var name = deviceDict["name"];
-
           if (name.toString().equals("Solar Charger")) {
-            //create 2 sized dict of solar chargers with index number and instance number
             solarChargerInstance = deviceDict["instance"];
             solarChargerAmount++;
             solarChargerDict[solarChargerAmount] = solarChargerInstance;
-
-            // System.println(
-            //   "Solar Charger Dict: " +
-            //     solarChargerDict +
-            //     " + solarChargerAmount: " +
-            //     solarChargerAmount +
-            //     " + solarChargerInstance " +
-            //     solarChargerInstance
-            // );
-
             var currentCon = deviceDict["lastConnection"].toNumber();
             var diff = now.subtract(new Time.Moment(currentCon)).value();
-
-            // check for timeouts
             if (diff > timeOutTime) {
               System.println("Solar Charger: " + name + " is offline");
             }
@@ -405,27 +372,19 @@ class CIQVRMApp extends Application.AppBase {
 
   function parseResponseForCode(response, code, valueKey, isSum as Boolean) {
     var result = null;
-
     if (response["records"] != null && response != null) {
       var records = response["records"];
-      // check if records has "data" dict.
       if (records != null && records["data"] != null) {
-        // Get the data
         var dataNumbersDict = records["data"];
         var dataLength = dataNumbersDict.size();
         var keys = dataNumbersDict.keys();
-
-        // iterate through each entry in "data" dict.
         for (var i = 0; i < dataLength; i++) {
           var key = keys[i];
           var value = null;
-
           if (dataNumbersDict[key] instanceof Dictionary) {
             value = dataNumbersDict[key]["code"];
-
             if (value != null && value.toString().equals(code)) {
               result = dataNumbersDict[key][valueKey];
-
               // System.println("Result for " + code + ": " + result);
             }
           }
