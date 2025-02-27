@@ -4,18 +4,17 @@ import Toybox.WatchUi;
 using Toybox.System;
 using Toybox.Communications;
 using Toybox.Timer;
+using Toybox.Application.Storage;
+using Toybox.Graphics;
 
 class CIQVRMApp extends Application.AppBase {
   /* to do:
- - sum up solar charger values
  - input for credentials
- - input for installation id
- - display data
   */
 
   // Private member variables for sensitive data
   private var token = null;
-  private var idSite as Number = IDSITE; // Consider externalizing for security.
+  private var idSite as Number = -1; // Initialize as -1 to check later
 
   // URLs for API interactions
   private var batteryDeviceBaseUrl as String;
@@ -40,17 +39,73 @@ class CIQVRMApp extends Application.AppBase {
 
   function initialize() {
     AppBase.initialize();
+    loadIdSite();
+    //askForToken();
+  }
+
+  // function executeDavidRequest () {
+  //   var davidRequestUrl = "https://vrmapi.victronenergy.com/v2/installations/IDSITE/stats?show_instance=true&attributeCodes[0]=SOC&attributeCodes[1]=ScW&type=custom&interval=5mins&start=1740660020";
+  //   var options = {
+  //     :method => Communications.HTTP_REQUEST_METHOD_GET,
+  //     :headers => {
+  //       "X-Authorization" => "Bearer " + token,
+  //     },
+  //     :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
+  //   };
+
+  //   Communications.makeWebRequest(
+  //     davidRequestUrl,
+  //     null,
+  //     options,
+  //     method(:onDavidResponse)
+  //   );
+  // }
+
+  // function onDavidResponse(
+  //   responseCode as Number,
+  //   data as Null or Dictionary or String
+  // ) as Void {
+  //   if (responseCode == 200) {
+  //     System.println("David Response: " + data);
+  //   } else {
+  //     System.println("David Response: " + responseCode);
+  //   }
+  // }
+
+  function loadIdSite() {
+    var storedId = Storage.getValue("idSite");
+    if (storedId != null) {
+      idSite = storedId.toNumber();
+      System.println("ID Site: " + idSite);
+      constructBaseUrls();
+    } else {
+      showIdSitePicker();
+    }
+  }
+
+  private function showIdSitePicker() {
+    System.println("Error: Installation ID not set");
+    var pickerView = new WatchUi.View();
+  }
+
+  private function onIdSiteSelected(value as String) as Void {
+    idSite = value.toNumber();
+    Storage.setValue("idSite", idSite);
     constructBaseUrls();
-    periodicalTimer.start(method(:onPeriodicRoutine), 15000, true);
+    askForToken();
   }
 
   private function constructBaseUrls() {
-    installationBaseUrl =
-      "https://vrmapi.victronenergy.com/v2/installations/" + idSite;
-    batteryDeviceBaseUrl =
-      installationBaseUrl + "/widgets/BatterySummary?instance=";
-    solarChargerBaseUrl =
-      installationBaseUrl + "/widgets/SolarChargerSummary?instance=";
+    if (idSite != -1) {
+      installationBaseUrl =
+        "https://vrmapi.victronenergy.com/v2/installations/" + idSite;
+      batteryDeviceBaseUrl =
+        installationBaseUrl + "/widgets/BatterySummary?instance=";
+      solarChargerBaseUrl =
+        installationBaseUrl + "/widgets/SolarChargerSummary?instance=";
+    } else {
+      System.println("Error: Base URL cannot be constructed without ID Site");
+    }
   }
 
   function askForToken() {
@@ -85,7 +140,7 @@ class CIQVRMApp extends Application.AppBase {
       :method => Communications.HTTP_REQUEST_METHOD_GET,
       :headers => {
         "X-Authorization" => "Bearer " + token,
-      }, // set token
+      },
       :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
     };
 
@@ -100,6 +155,7 @@ class CIQVRMApp extends Application.AppBase {
   function onPeriodicRoutine() {
     System.println("Total ScW: " + totalScW);
     System.println("Total SoC: " + totalSoC);
+    WatchUi.requestUpdate();
     receivedArr = [];
     totalScW = 0;
     totalSoC = 0;
@@ -112,7 +168,7 @@ class CIQVRMApp extends Application.AppBase {
       :method => Communications.HTTP_REQUEST_METHOD_GET,
       :headers => {
         "X-Authorization" => "Bearer " + token,
-      }, // set token
+      },
       :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
     };
 
@@ -141,7 +197,12 @@ class CIQVRMApp extends Application.AppBase {
   }
 
   function onStart(state as Dictionary?) as Void {
-    askForToken();
+    var storedIdSite = Storage.getValue("idSite");
+    if (storedIdSite == null || storedIdSite == -1) {
+    } else {
+      idSite = storedIdSite.toNumber();
+      askForToken();
+    }
   }
 
   function onStop(state as Dictionary?) as Void {}
@@ -161,20 +222,22 @@ class CIQVRMApp extends Application.AppBase {
     // autostart
     if (responseCode == 200) {
       if (data != null && data instanceof Dictionary && data["token"] != null) {
-        token = (data as Dictionary)["token"]; // set token to data["token"]
+        token = (data as Dictionary)["token"];
         Storage.setValue("token", token);
       } else {
         System.println("Error: Invalid data received");
         return;
       }
+      //executeDavidRequest();
       askForInstalledDevices();
     } else if (responseCode == 200) {
+      // executeDavidRequest();
       askForInstalledDevices();
     } else if (responseCode == 401) {
       askForToken();
-      System.println("Response: " + responseCode); // print response code
+      System.println("Response: " + responseCode);
     } else {
-      System.println("ELSE: " + responseCode); // print response code
+      System.println("ELSE: " + responseCode);
     }
   }
 
@@ -183,6 +246,8 @@ class CIQVRMApp extends Application.AppBase {
     installedDevices as Null or Dictionary or String
   ) {
     if (responseCode == 200) {
+      periodicalTimer.start(method(:onPeriodicRoutine), 15000, true);
+
       // handle batteries
       filterMostCurrentBattery(installedDevices);
       buildBatteryUrl();
@@ -191,7 +256,7 @@ class CIQVRMApp extends Application.AppBase {
       filterSolarChargers(installedDevices);
       buildSolarChargerUrl(solarChargerAmount);
     } else {
-      System.println("Response: " + responseCode); // print response code
+      System.println("Response: " + responseCode);
     }
   }
 
@@ -199,6 +264,8 @@ class CIQVRMApp extends Application.AppBase {
     // check if top level in installedDevices JSON is "records" key, and create an array of the underlying data
     var batteryLastCon = null;
     var currentBatteryInstance = null;
+
+    //TODO: check if ??? Battery Bus type is given --> take value of mysterious bus type
 
     if (installedDevices["records"] != null) {
       var records = installedDevices["records"];
@@ -274,11 +341,11 @@ class CIQVRMApp extends Application.AppBase {
         sumNeeded
       );
       if (socValue != null) {
-        totalSoC += socValue.toNumber();
+        totalSoC = socValue.toNumber();
       }
       Storage.setValue("totalSoC", totalSoC);
     } else {
-      System.println("Response: " + responseCode); // print response code
+      System.println("Response: " + responseCode);
     }
   }
 
@@ -398,6 +465,50 @@ class CIQVRMApp extends Application.AppBase {
 
   function getCurrentToken() as String {
     return token;
+  }
+
+  function resetUserData() {
+    // Clear storage values
+    Storage.clearValues();
+    
+    // Reset member variables
+    token = null;
+    idSite = -1;
+    totalScW = 0;
+    totalSoC = 0;
+    receivedArr = [];
+    solarChargerDict = {};
+    batteryDeviceInstance = null;
+    solarChargerDeviceInstance = null;
+    askOnceFlag = false;
+    
+    // Stop timers
+    periodicalTimer.stop();
+    requestTimer.stop();
+    
+    // Ensure no further requests are made
+    periodicalTimer = new Timer.Timer();
+    requestTimer = new Timer.Timer();
+    
+    // Update UI
+    WatchUi.requestUpdate();
+    
+    System.println("User data has been reset");
+  }
+
+}
+
+class StringPickerDelegate extends WatchUi.PickerDelegate {
+  function initialize() {
+    WatchUi.PickerDelegate.initialize();
+  }
+
+  function onSelect(value as String) {
+    getApp().onIdSiteSelected(value);
+  }
+
+  function onCancel() {
+    System.println("Picker canceled");
   }
 }
 

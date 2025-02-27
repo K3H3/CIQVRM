@@ -4,5 +4,6 @@
     <string id="prompt">Click the menu button</string>
 
     <string id="get_data_label">Get Data</string>
-    <string id="get_token_label">Get Login-Token</string>
+    <string id="delete_user_data_label">Delete User Data</string>
+    <string id="installationIDPickerTitle">Select Installation ID</string>
 </strings>

@@ -1,4 +1,4 @@
 <menu id="MainMenu">
     <menu-item id="get_data" label="@Strings.get_data_label" />
-    <menu-item id="get_token" label="@Strings.get_token_label" />
+    <menu-item id="delete_user_data" label="@Strings.delete_user_data_label" />
 </menu>
