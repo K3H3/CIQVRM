@@ -37,7 +37,7 @@ class CIQVRMView extends WatchUi.View {
   }
 
   public function draw(dc as Dc) as Void {
-    var font = Graphics.FONT_MEDIUM;
+    var font = Graphics.FONT_SMALL;
     var totalScW = Storage.getValue("totalScW");
     var totalSoC = Storage.getValue("totalSoC");
 
@@ -54,14 +54,14 @@ class CIQVRMView extends WatchUi.View {
       dc.getWidth() / 2,
       dc.getHeight() / 2 - 20,
       font,
-      "Total ScW: " + totalScW.toString(),
+      "Solar Power: " + totalScW.toString() + " W",
       Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
     );
     dc.drawText(
       dc.getWidth() / 2,
       dc.getHeight() / 2 + 20,
       font,
-      "Total SoC: " + totalSoC.toString(),
+      "Battery: " + totalSoC.toString() + " %",
       Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
     );
   }

@@ -3,7 +3,7 @@
 
     <string id="prompt">Click the menu button</string>
 
-    <string id="get_data_label">Get Data</string>
+    <string id="manual_refresh_label">Refresh manually</string>
     <string id="delete_user_data_label">Delete User Data</string>
     <string id="installationIDPickerTitle">Select Installation ID</string>
 </strings>
