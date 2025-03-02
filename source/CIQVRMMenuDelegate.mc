@@ -13,11 +13,9 @@ class CIQVRMMenuDelegate extends WatchUi.MenuInputDelegate {
     }
 
     function onMenuItem(item as Symbol) as Void {
-        if (item == :get_data) {
-            System.println("Ask for Battery Data.");
+        if (item == :manual_refresh) {
             ciqapp.askForToken();
         } else if (item == :delete_user_data) {
-            System.println("Delete User Data");
             ciqapp.resetUserData();
         }
     }
