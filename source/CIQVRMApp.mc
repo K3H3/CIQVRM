@@ -8,13 +8,12 @@ using Toybox.Application.Storage;
 using Toybox.Graphics;
 
 class CIQVRMApp extends Application.AppBase {
-  /* to do:
- - input for credentials
-  */
 
   // Private member variables for sensitive data
   private var token = null;
   private var idSite as Number = -1; // Initialize as -1 to check later
+  private var username = null;
+  private var password = null;
 
   // URLs for API interactions
   private var batteryDeviceBaseUrl as String;
@@ -34,7 +33,51 @@ class CIQVRMApp extends Application.AppBase {
 
   function initialize() {
     AppBase.initialize();
-    loadIdSite();
+    loadUserData();
+  }
+
+  function loadUserData() {
+    var storedId = Storage.getValue("idSite");
+    var storedUsername = Storage.getValue("username");
+    var storedPassword = Storage.getValue("password");
+
+    if (storedId != null) {
+      idSite = storedId.toNumber();
+      System.println("ID Site: " + idSite);
+      constructBaseUrls();
+      askForToken();
+    } else {
+      System.println("Error: Installation ID not set");
+      var pickerView = new WatchUi.View();
+    }
+
+    if (storedUsername != null) {
+      username = storedUsername.toString();
+      System.println("Username: " + username);
+    } else {
+      System.print("Username not set");
+      var pickerView = new WatchUi.View();
+    }
+
+    if (storedPassword != null) {
+      password = storedPassword.toString();
+      System.println("Password: " + password);
+    } else {
+      System.print("Password not set");
+      var pickerView = new WatchUi.View();
+    }
+  }
+
+  private function showCredentialsPicker() {
+    System.println("Error: Credentials not set");
+    var pickerView = new WatchUi.View();
+  }
+
+  private function onIdSiteSelected(value as String) as Void {
+    idSite = value.toNumber();
+    Storage.setValue("idSite", idSite);
+    constructBaseUrls();
+    askForToken();
   }
 
   function askForScW() {
@@ -100,30 +143,6 @@ class CIQVRMApp extends Application.AppBase {
     WatchUi.requestUpdate();
   }
 
-  function loadIdSite() {
-    var storedId = Storage.getValue("idSite");
-    if (storedId != null) {
-      idSite = storedId.toNumber();
-      System.println("ID Site: " + idSite);
-      constructBaseUrls();
-      askForToken();
-    } else {
-      showIdSitePicker();
-    }
-  }
-
-  private function showIdSitePicker() {
-    System.println("Error: Installation ID not set");
-    var pickerView = new WatchUi.View();
-  }
-
-  private function onIdSiteSelected(value as String) as Void {
-    idSite = value.toNumber();
-    Storage.setValue("idSite", idSite);
-    constructBaseUrls();
-    askForToken();
-  }
-
   private function constructBaseUrls() {
     if (idSite != -1) {
       installationBaseUrl =
@@ -141,8 +160,8 @@ class CIQVRMApp extends Application.AppBase {
     var login_url = "https://vrmapi.victronenergy.com/v2/auth/login"; // set the url
 
     var params = {
-      "username" => "USERNAME",
-      "password" => "PASSWORD",
+      "username" => username,
+      "password" => password,
     };
 
     var options = {
@@ -254,15 +273,13 @@ class CIQVRMApp extends Application.AppBase {
     installedDevices as Null or Dictionary or String
   ) {
     if (responseCode == 200) {
-      filterForVEBus(installedDevices);
+      filterForTotalBattery(installedDevices);
     } else {
       System.println("Response: " + responseCode);
     }
   }
 
-  function filterForVEBus(installedDevices) {
-    //TODO: check if ??? Battery VE.Bus type is given --> take value of mysterious bus type
-
+  function filterForTotalBattery(installedDevices) {
     if (installedDevices["records"] != null) {
       var records = installedDevices["records"];
       var devices = records["devices"];
@@ -276,7 +293,12 @@ class CIQVRMApp extends Application.AppBase {
           var name = deviceDict["name"];
 
           if (name.toString().equals("Battery Monitor")) {
-            if (deviceDict["customName"].toString().toLower().equals("total battery")) {
+            if (
+              deviceDict["customName"]
+                .toString()
+                .toLower()
+                .equals("total battery")
+            ) {
               batteryDeviceInstance = deviceDict["instance"];
               askForBatteryInfo(
                 batteryDeviceBaseUrl + deviceDict["instance"].toNumber()

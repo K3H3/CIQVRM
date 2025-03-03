@@ -3,9 +3,11 @@ using Toybox.Application.Storage;
 
 class MyTextPickerDelegate extends WatchUi.TextPickerDelegate {
   var screenMessage = "";
+  var inputFieldKey = "";
 
-  function initialize() {
+  function initialize(fieldKey) {
     WatchUi.TextPickerDelegate.initialize();
+    inputFieldKey = fieldKey;
   }
 
   function onCancel() {
@@ -14,7 +16,7 @@ class MyTextPickerDelegate extends WatchUi.TextPickerDelegate {
   }
 
   function onTextEntered(text, changed) {
-    Storage.setValue("idSite", text.toString());
-    getApp().loadIdSite();
+    Storage.setValue(inputFieldKey, text.toString());
+    getApp().loadUserData();
   }
 }
