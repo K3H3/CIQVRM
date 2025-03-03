@@ -1,5 +1,10 @@
 <strings>
     <string id="AppName">CIQVRM</string>
+    <string id="main_menu_title">Main Menu</string>
+    <string id="userdata">User Data:</string>
+    <string id="userName">Username:</string>
+    <string id="password">Password:</string>
+    <string id="idSite">Installation ID:</string>
 
     <string id="prompt">Click the menu button</string>
 

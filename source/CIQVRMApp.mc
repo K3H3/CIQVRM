@@ -8,6 +8,13 @@ using Toybox.Application.Storage;
 using Toybox.Graphics;
 
 class CIQVRMApp extends Application.AppBase {
+  /*
+  To do:
+    - use Strings in Menulist
+    - handle bad user input (check api responses)
+    - password anonymization
+    - error handling
+  */
 
   // Private member variables for sensitive data
   private var token = null;
@@ -392,6 +399,7 @@ class CIQVRMApp extends Application.AppBase {
 
     System.println("User data has been reset");
   }
+
 }
 
 class StringPickerDelegate extends WatchUi.PickerDelegate {

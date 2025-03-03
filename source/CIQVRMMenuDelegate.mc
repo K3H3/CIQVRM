@@ -2,22 +2,27 @@ import Toybox.Lang;
 import Toybox.System;
 import Toybox.WatchUi;
 
+class CIQVRMMenuDelegate extends WatchUi.Menu2InputDelegate {
+  function initialize() {
+    Menu2InputDelegate.initialize();
+  }
 
-
-class CIQVRMMenuDelegate extends WatchUi.MenuInputDelegate {
-
-    var ciqapp = new CIQVRMApp();
-
-    function initialize() {
-        MenuInputDelegate.initialize();
+  function onSelect(item) {
+    System.println(item.getId());
+    if (item.getId().equals("onUsername")) {
+      pushPicker("", "username");
+    } else if (item.getId().equals("onPassword")) {
+      pushPicker("", "password");
+    } else if (item.getId().equals("onIdSite")) {
+      pushPicker("", "idSite");
     }
+  }
 
-    function onMenuItem(item as Symbol) as Void {
-        if (item == :manual_refresh) {
-            ciqapp.askForToken();
-        } else if (item == :delete_user_data) {
-            ciqapp.resetUserData();
-        }
-    }
-
+  function pushPicker(screenMessage, datafield) as Void {
+    WatchUi.pushView(
+      new WatchUi.TextPicker(datafield),
+      new MyTextPickerDelegate(datafield),
+      WatchUi.SLIDE_IMMEDIATE
+    );
+  }
 }
