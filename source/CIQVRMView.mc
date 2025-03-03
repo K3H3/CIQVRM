@@ -17,14 +17,21 @@ class CIQVRMView extends WatchUi.View {
   // loading resources into memory.
   function onShow() as Void {
     if (Storage.getValue("idSite") == null) {
-      pushPicker();
+      System.println("idSite is null");
+      pushPicker("", "idSite");
+    } else if (Storage.getValue("username") == null) {
+      System.println("Username is null");
+      pushPicker("", "username");
+    } else if (Storage.getValue("password") == null) {
+      System.println("password is null");
+      pushPicker("", "password");
     }
   }
 
-  function pushPicker() as Void {
+  function pushPicker(screenMessage, datafield) as Void {
     WatchUi.pushView(
-      new WatchUi.TextPicker(""),
-      new MyTextPickerDelegate(),
+      new WatchUi.TextPicker(datafield),
+      new MyTextPickerDelegate(datafield),
       WatchUi.SLIDE_IMMEDIATE
     );
   }
