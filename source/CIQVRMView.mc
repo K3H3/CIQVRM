@@ -17,24 +17,14 @@ class CIQVRMView extends WatchUi.View {
   // loading resources into memory.
   function onShow() as Void {
     if (Storage.getValue("idSite") == null) {
-      System.println("idSite is null");
-      pushPicker("", "idSite");
+      createMenu();
     } else if (Storage.getValue("username") == null) {
-      System.println("Username is null");
-      pushPicker("", "username");
+      createMenu();
     } else if (Storage.getValue("password") == null) {
-      System.println("password is null");
-      pushPicker("", "password");
+      createMenu();
     }
   }
 
-  function pushPicker(screenMessage, datafield) as Void {
-    WatchUi.pushView(
-      new WatchUi.TextPicker(datafield),
-      new MyTextPickerDelegate(datafield),
-      WatchUi.SLIDE_IMMEDIATE
-    );
-  }
 
   // Update the view
   function onUpdate(dc as Dc) as Void {
@@ -71,6 +61,28 @@ class CIQVRMView extends WatchUi.View {
       "Battery: " + totalSoC.toString() + " %",
       Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
     );
+  }
+
+    function createMenu() {
+    var menu = new WatchUi.Menu2({ :title => "Settings" });
+    var delegate;
+
+    menu.addItem(
+      new MenuItem("Username", Storage.getValue("username"), "onUsername", {})
+    );
+
+    menu.addItem(
+      new MenuItem("Password", Storage.getValue("password"), "onPassword", {})
+    );
+
+    menu.addItem(
+      new MenuItem("Installation ID", Storage.getValue("idSite"), "onIdSite", {})
+    );
+
+    delegate = new CIQVRMMenuDelegate();
+
+    // Push the Menu2 View set up in the initializer
+    WatchUi.pushView(menu, delegate, WatchUi.SLIDE_IMMEDIATE);
   }
 
   // Called when this View is removed from the screen. Save the
