@@ -11,9 +11,11 @@ class CIQVRMApp extends Application.AppBase {
   /*
   To do:
     - use Strings in Menulist
+    - remove empty chars from input string (when input with garmin app is used, space chars are added)
     - handle bad user input (check api responses)
     - password anonymization
     - error handling
+    - add/edit api requets for current consumption
   */
 
   // Private member variables for sensitive data
@@ -75,7 +77,7 @@ class CIQVRMApp extends Application.AppBase {
 
     if (idSite != -1 && username != null && password != null) {
       askForToken();
-      periodicalTimer.start(method(:onPeriodicRoutine), 5000, true);
+      periodicalTimer.start(method(:onPeriodicRoutine), 15000, true);
     }
   }
 

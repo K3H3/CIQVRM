@@ -15,6 +15,9 @@ class CIQVRMMenuDelegate extends WatchUi.Menu2InputDelegate {
       pushPicker("", "password");
     } else if (item.getId().equals("onIdSite")) {
       pushPicker("", "idSite");
+    } else if (item.getId().equals("onReset")) {
+      getApp().resetUserData();
+      WatchUi.popView(SLIDE_IMMEDIATE);
     }
   }
 
