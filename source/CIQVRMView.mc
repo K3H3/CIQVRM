@@ -25,7 +25,6 @@ class CIQVRMView extends WatchUi.View {
     }
   }
 
-
   // Update the view
   function onUpdate(dc as Dc) as Void {
     // Call the parent onUpdate function to redraw the layout
@@ -35,35 +34,50 @@ class CIQVRMView extends WatchUi.View {
 
   public function draw(dc as Dc) as Void {
     var font = Graphics.FONT_SMALL;
-    var totalScW = Storage.getValue("totalScW");
-    var totalSoC = Storage.getValue("totalSoC");
+    var displaySolarYield = Storage.getValue("solarYield");
+    var displayBatterySoC = Storage.getValue("bs");
+    var displayBatteryConsumption = Storage.getValue("consumption");
 
     // Handle null values
-    if (totalScW == null) {
-      totalScW = 0;
+    if (displaySolarYield == null) {
+      displaySolarYield = 0;
     }
-    if (totalSoC == null) {
-      totalSoC = 0;
+    if (displayBatterySoC == null) {
+      displayBatterySoC = 0;
+    }
+    if (displayBatteryConsumption == null) {
+      displayBatteryConsumption = 0;
     }
 
     dc.clear();
+    var screenHeight = dc.getHeight();
+    var screenWidth = dc.getWidth();
+    var itemSpacing = screenHeight / 8;
+
     dc.drawText(
-      dc.getWidth() / 2,
-      dc.getHeight() / 2 - 20,
+      screenWidth / 2,
+      screenHeight / 2 - itemSpacing,
       font,
-      "Solar Power: " + totalScW.toString() + " W",
+      "Solar Power: " + displaySolarYield.toString() + " W",
       Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
     );
     dc.drawText(
-      dc.getWidth() / 2,
-      dc.getHeight() / 2 + 20,
+      screenWidth / 2,
+      screenHeight / 2,
       font,
-      "Battery: " + totalSoC.toString() + " %",
+      "Battery: " + displayBatterySoC.toNumber() + " %",
+      Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
+    );
+    dc.drawText(
+      screenWidth / 2,
+      screenHeight / 2 + itemSpacing,
+      font,
+      "Consumption: " + displayBatteryConsumption.toString() + " W",
       Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
     );
   }
 
-    function createMenu() {
+  function createMenu() {
     var menu = new WatchUi.Menu2({ :title => "Settings" });
     var delegate;
 
@@ -76,12 +90,15 @@ class CIQVRMView extends WatchUi.View {
     );
 
     menu.addItem(
-      new MenuItem("Installation ID", Storage.getValue("idSite"), "onIdSite", {})
+      new MenuItem(
+        "Installation ID",
+        Storage.getValue("idSite"),
+        "onIdSite",
+        {}
+      )
     );
 
-    menu.addItem(
-      new MenuItem("Reset User Data", null, "onReset", {})
-    );
+    menu.addItem(new MenuItem("Reset User Data", null, "onReset", {}));
 
     delegate = new CIQVRMMenuDelegate();
 
