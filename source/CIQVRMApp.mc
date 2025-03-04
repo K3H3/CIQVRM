@@ -93,7 +93,7 @@ class CIQVRMApp extends Application.AppBase {
 
   function askForScW() {
     var davidRequestUrl =
-      "https://vrmapi.victronenergy.com/v2/installations/IDSITE/stats?show_instance=true&attributeCodes[0]=ScW&type=custom&interval=15mins&start=" +
+      "https://vrmapi.victronenergy.com/v2/installations/"+ idSite + "/stats?show_instance=true&attributeCodes[0]=ScW&type=custom&interval=15mins&start=" +
       (Time.now().value() - 60).toString();
     var options = {
       :method => Communications.HTTP_REQUEST_METHOD_GET,
