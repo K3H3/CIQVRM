@@ -133,13 +133,17 @@ class CIQVRMApp extends Application.AppBase {
   }
 
   function analyzeStatsData(inputData) {
+    System.println(inputData);
     if (inputData["success"] == true) {
       var totals = inputData["totals"];
-      var bs = totals["bs"].toDouble().format("%.1f");
+      var bs = totals["bs"].toString();
+      bs = bs.toNumber();
       Storage.setValue("bs", bs);
-      var solarYield = totals["solar_yield"].toNumber();
+      var solarYield = totals["solar_yield"].toString();
+      solarYield = solarYield.toNumber();
       Storage.setValue("solarYield", solarYield);
-      var consumption = totals["consumption"].toNumber();
+      var consumption = totals["consumption"].toString();
+      consumption = consumption.toNumber();
       Storage.setValue("consumption", consumption);
     } else {
       System.println("Data analyzation failed.");
