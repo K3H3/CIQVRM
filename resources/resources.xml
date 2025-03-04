@@ -1,6 +1,7 @@
 <resources>
     <bitmap id="victron_logo" filename="./images/victron_logo.png" />
     <bitmap id="victron_energy280" filename="./images/logo-victron-energy280x280.png" />
+    <bitmap id="victron_energy40" filename="./images/logo-victron-energy40x40.png" />
     <!-- Application -->
     <string id="appName">Picker</string>
     <!-- Main View -->
