@@ -52,7 +52,6 @@ class CIQVRMApp extends Application.AppBase {
       idSite = storedId.toNumber();
       System.println("ID Site: " + idSite);
       constructBaseUrls();
-      askForToken();
     } else {
       System.println("Error: Installation ID not set");
       var pickerView = new WatchUi.View();
@@ -72,6 +71,11 @@ class CIQVRMApp extends Application.AppBase {
     } else {
       System.print("Password not set");
       var pickerView = new WatchUi.View();
+    }
+
+    if (idSite != -1 && username != null && password != null) {
+      askForToken();
+      periodicalTimer.start(method(:onPeriodicRoutine), 5000, true);
     }
   }
 
@@ -327,13 +331,12 @@ class CIQVRMApp extends Application.AppBase {
     responseCode as Number,
     data as Null or Dictionary or String
   ) as Void {
-    var sumNeeded as Boolean = false;
     if (responseCode == 200) {
       var socValue = parseResponseForCode(
         data,
         "SOC",
         "valueFormattedWithUnit",
-        sumNeeded
+        false
       );
       if (socValue != null) {
         totalSoC = socValue.toNumber();
