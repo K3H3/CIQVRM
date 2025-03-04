@@ -52,7 +52,7 @@ class CIQVRMView extends WatchUi.View {
     dc.clear();
     var screenHeight = dc.getHeight();
     var screenWidth = dc.getWidth();
-    var itemSpacing = screenHeight / 8;
+    var itemSpacing = screenHeight / 6;
 
     dc.drawText(
       screenWidth / 2,
