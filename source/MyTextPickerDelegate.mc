@@ -18,5 +18,6 @@ class MyTextPickerDelegate extends WatchUi.TextPickerDelegate {
   function onTextEntered(text, changed) {
     Storage.setValue(inputFieldKey, text.toString());
     getApp().loadUserData();
+    WatchUi.popView(SLIDE_IMMEDIATE);
   }
 }
