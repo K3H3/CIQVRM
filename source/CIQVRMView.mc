@@ -79,6 +79,10 @@ class CIQVRMView extends WatchUi.View {
       new MenuItem("Installation ID", Storage.getValue("idSite"), "onIdSite", {})
     );
 
+    menu.addItem(
+      new MenuItem("Reset User Data", null, "onReset", {})
+    );
+
     delegate = new CIQVRMMenuDelegate();
 
     // Push the Menu2 View set up in the initializer
