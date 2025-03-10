@@ -48,4 +48,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For any questions or support, please open an issue in the repository or contact me directly.
 
-Thanks to David B. for API optimizations.
+Thanks to [David B.](https://github.com/DaviBe92) for API optimizations.
