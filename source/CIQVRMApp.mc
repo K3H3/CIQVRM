@@ -251,31 +251,6 @@ class CIQVRMApp extends Application.AppBase {
     }
   }
 
-  // function parseResponseForCode(response, code, valueKey, isSum as Boolean) {
-  //   var result = null;
-  //   if (response["records"] != null && response != null) {
-  //     var records = response["records"];
-  //     if (records != null && records["data"] != null) {
-  //       var dataNumbersDict = records["data"];
-  //       var dataLength = dataNumbersDict.size();
-  //       var keys = dataNumbersDict.keys();
-  //       for (var i = 0; i < dataLength; i++) {
-  //         var key = keys[i];
-  //         var value = null;
-  //         if (dataNumbersDict[key] instanceof Dictionary) {
-  //           value = dataNumbersDict[key]["code"];
-  //           if (value != null && value.toString().equals(code)) {
-  //             result = dataNumbersDict[key][valueKey];
-  //             // System.println("Result for " + code + ": " + result);
-  //           }
-  //         }
-  //       }
-  //     }
-  //     return result;
-  //   } else {
-  //     System.println("Records not found");
-  //   }
-  // }
 
   function getCurrentToken() as String {
     return token;
@@ -324,4 +299,32 @@ class StringPickerDelegate extends WatchUi.PickerDelegate {
 
 function getApp() as CIQVRMApp {
   return Application.getApp() as CIQVRMApp;
+}
+
+class Helper extends Application.AppBase {
+  function parseResponseForCode(response, code, valueKey, isSum as Boolean) {
+    var result = null;
+    if (response["records"] != null && response != null) {
+      var records = response["records"];
+      if (records != null && records["data"] != null) {
+        var dataNumbersDict = records["data"];
+        var dataLength = dataNumbersDict.size();
+        var keys = dataNumbersDict.keys();
+        for (var i = 0; i < dataLength; i++) {
+          var key = keys[i];
+          var value = null;
+          if (dataNumbersDict[key] instanceof Dictionary) {
+            value = dataNumbersDict[key]["code"];
+            if (value != null && value.toString().equals(code)) {
+              result = dataNumbersDict[key][valueKey];
+              // System.println("Result for " + code + ": " + result);
+            }
+          }
+        }
+      }
+      return result;
+    } else {
+      System.println("Records not found");
+    }
+  }
 }
