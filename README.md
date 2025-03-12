@@ -10,7 +10,7 @@ CIQVRM has a minimum required API Level of 3.0.0.
 - **User Data Management**: Store and manage your installation ID, username, and password directly on the watch.
 - **Periodic Updates**: Automatically fetch and display updated data at regular intervals.
 
-- ![grafik](https://github.com/user-attachments/assets/49739b89-4649-4bbd-8466-fd7642044e5f)
+![grafik](https://github.com/user-attachments/assets/92d74707-0a8b-4715-a074-f6ee21c7a5c0)
 ![grafik](https://github.com/user-attachments/assets/b279bb39-15b6-4512-811f-6be3b65ec283)
 
 
@@ -48,4 +48,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For any questions or support, please open an issue in the repository or contact me directly.
 
-Thanks to David B. for API optimizations.
+Thanks to [David B.](https://github.com/DaviBe92) for API optimizations.
