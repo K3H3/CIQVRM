@@ -37,26 +37,41 @@ class CIQVRMApp extends Application.AppBase {
     loadUserData();
   }
 
+  function onStart(state as Dictionary?) as Void {
+  }
+
+  function onStop(state as Dictionary?) as Void {}
+  // Return the initial view of your application here
+  function getInitialView() as [Views] or [Views, InputDelegates] {
+    return [new CIQVRMView(), new CIQVRMDelegate()];
+  }
+
   function loadUserData() {
     var storedId = Storage.getValue("idSite");
     var storedUsername = Storage.getValue("username");
     var storedPassword = Storage.getValue("password");
 
-    if (storedId != null) {
+    if (storedId != null && storedId.toString().equals("null") == false) {
       idSite = storedId.toNumber();
     } else {
       System.println("Error: Installation ID not set");
       var pickerView = new WatchUi.View();
     }
 
-    if (storedUsername != null) {
+    if (
+      storedUsername != null &&
+      storedUsername.toString().equals("null") == false
+    ) {
       username = storedUsername.toString();
     } else {
       System.print("Username not set");
       var pickerView = new WatchUi.View();
     }
 
-    if (storedPassword != null) {
+    if (
+      storedPassword != null &&
+      storedPassword.toString().equals("null") == false
+    ) {
       password = storedPassword.toString();
     } else {
       System.print("Password not set");
@@ -64,24 +79,57 @@ class CIQVRMApp extends Application.AppBase {
     }
 
     if (idSite != -1 && username != null && password != null) {
-      if (Storage.getValue("token").toString().equals("null") == false) {
-        fetchStatsData(Storage.getValue("token").toString());
-      } else {
-        System.println("Token not set, asking for new one");
-        askForToken();
-      }
+      askForToken();
     }
   }
 
-  private function showCredentialsPicker() {
-    System.println("Error: Credentials not set");
-    var pickerView = new WatchUi.View();
+  function askForToken() {
+    var login_url = "https://vrmapi.victronenergy.com/v2/auth/login";
+    var params = {
+      "username" => username,
+      "password" => password,
+    };
+    var options = {
+      :method => Communications.HTTP_REQUEST_METHOD_POST,
+      :headers => {
+        "Content-Type" => Communications.REQUEST_CONTENT_TYPE_JSON,
+      },
+      :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
+    };
+
+    Communications.makeWebRequest(
+      login_url,
+      params,
+      options,
+      method(:onTokenReceived)
+    );
   }
 
-  private function onIdSiteSelected(value as String) as Void {
-    idSite = value.toNumber();
-    Storage.setValue("idSite", idSite);
-    askForToken();
+  function onTokenReceived(
+    responseCode as Number,
+    data as Null or Dictionary or String
+  ) as Void {
+    WatchUi.requestUpdate();
+    if (responseCode == 200) {
+      Storage.setValue("token", (data as Dictionary)["token"].toString());
+      fetchStatsData((data as Dictionary)["token"].toString());
+    } else if (responseCode == 401) {
+      WatchUi.showToast("401: Unauthorized, check userdata", null);
+      //push settings menu
+      var menu = new CIQVRMView();
+    } else if (responseCode == 403) {
+      WatchUi.showToast("403: Token lacks permissions", null);
+      System.println("Error: Token lacks permissions");
+    } else if (responseCode == 404) {
+      WatchUi.showToast("404: Installation ID not found", null);
+      System.println("Error: Installation ID not found");
+    } else if (responseCode == 429) {
+      System.println("Error: Too many requests");
+      return;
+      //time out timer start
+    } else {
+      System.println("ELSE: " + responseCode);
+    }
   }
 
   function fetchStatsData(token) {
@@ -119,14 +167,24 @@ class CIQVRMApp extends Application.AppBase {
   ) as Void {
     if (responseCode == 200) {
       analyzeStatsData(data);
-    } else if (responseCode == 404) {
-      System.println("Error: Installation ID not found");
-      // pick new installation ID
+    } else if (responseCode == 204) {
+      System.println("Error: No Content");
+      WatchUi.showToast("204: no Content", null);
     } else if (responseCode == 401) {
       System.println("Error: Unauthorized");
       askForToken();
+    } else if (responseCode == 400) {
+      WatchUi.showToast("400: Bad request", null);
+      System.println("Error: Token lacks permissions");
+    } else if (responseCode == 404) {
+      WatchUi.showToast("404: Not found", null);
+      System.println("Error: Installation ID not found");
+    } else if (responseCode == 429) {
+      WatchUi.showToast("Timeout: Too many requests (429)", null);
+      System.println("Error: Too many requests");
+      return;
     } else {
-      System.println("Error: " + responseCode);
+      System.println("ELSE: " + responseCode);
     }
   }
 
@@ -143,80 +201,20 @@ class CIQVRMApp extends Application.AppBase {
       var consumption = totals["consumption"].toString();
       consumption = consumption.toNumber();
       Storage.setValue("consumption", consumption);
+      WatchUi.requestUpdate();
     } else {
       handleUnprocessableData();
     }
   }
 
-  function handleUnprocessableData() {
-    System.println("Data analyzation failed. Retrying...");
-  }
-
-  function askForToken() {
-    var login_url = "https://vrmapi.victronenergy.com/v2/auth/login";
-    var params = {
-      "username" => username,
-      "password" => password,
-    };
-    var options = {
-      :method => Communications.HTTP_REQUEST_METHOD_POST,
-      :headers => {
-        "Content-Type" => Communications.REQUEST_CONTENT_TYPE_JSON,
-      },
-      :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
-    };
-
-    Communications.makeWebRequest(
-      login_url,
-      params,
-      options,
-      method(:onTokenReceived)
-    );
-  }
-
   function onPeriodicRoutine() {
-    WatchUi.requestUpdate();
     fetchStatsData(Storage.getValue("token").toString());
   }
 
-  function onStart(state as Dictionary?) as Void {
-    var storedIdSite = Storage.getValue("idSite");
-    if (storedIdSite == null || storedIdSite == -1) {
-    } else {
-      idSite = storedIdSite.toNumber();
-    }
-  }
-
-  function onStop(state as Dictionary?) as Void {}
-  // Return the initial view of your application here
-  function getInitialView() as [Views] or [Views, InputDelegates] {
-    return [new CIQVRMView(), new CIQVRMDelegate()];
-  }
-
-  function onTokenReceived(
-    responseCode as Number,
-    data as Null or Dictionary or String
-  ) as Void {
-    if (responseCode == 200) {
-      Storage.setValue("token", (data as Dictionary)["token"].toString());
-      fetchStatsData((data as Dictionary)["token"].toString());
-    } else if (responseCode == 401) {
-      if (Toybox.WatchUi has :showToast) {
-        WatchUi.showToast("Bad Token received, check userdata", null);
-      }
-      requestUserDataCheck();
-    } else if (responseCode == 429) {
-      System.println("Error: Too many requests");
-      return;
-      //time out timer start
-    } else {
-      System.println("ELSE: " + responseCode);
-    }
-  }
-
-  function requestUserDataCheck() {
-    //push settings menu
-    var menu = new CIQVRMView();
+  function handleUnprocessableData() {
+    System.println("Data analyzation failed. Retrying...");
+    // toast to user
+    WatchUi.showToast("Data analyzation failed. Retrying...", null);
   }
 
   function resetUserData() {
@@ -244,10 +242,6 @@ class CIQVRMApp extends Application.AppBase {
 class StringPickerDelegate extends WatchUi.PickerDelegate {
   function initialize() {
     WatchUi.PickerDelegate.initialize();
-  }
-
-  function onSelect(value as String) {
-    getApp().onIdSiteSelected(value);
   }
 
   function onCancel() {
